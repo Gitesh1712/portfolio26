@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #8b5cf6; /* purple-500 */
+    --color-primary-foreground: #ffffff; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #a78bfa; /* purple-400 */
+    --color-secondary-foreground: #ffffff; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #c4b5fd; /* purple-300 */
+    --color-accent-foreground: #1f2937; /* gray-800 */
+    
+    /* Background Colors */
+    --color-background: #0f0f0f; /* near-black */
+    --color-foreground: #f8fafc; /* slate-50 */
+    
+    /* Surface Colors */
+    --color-card: #1a1a1a; /* dark-gray */
+    --color-card-foreground: #f8fafc; /* slate-50 */
+    
+    --color-popover: #1a1a1a; /* dark-gray */
+    --color-popover-foreground: #f8fafc; /* slate-50 */
+    
+    /* Muted Colors */
+    --color-muted: #2d2d2d; /* medium-dark-gray */
+    --color-muted-foreground: #94a3b8; /* slate-400 */
+    
+    /* Border & Input */
+    --color-border: rgba(139, 92, 246, 0.2); /* purple-500 with opacity */
+    --color-input: rgba(139, 92, 246, 0.2); /* purple-500 with opacity */
+    --color-ring: #8b5cf6; /* purple-500 */
+    
+    /* Status Colors */
+    --color-success: #10b981; /* emerald-500 */
+    --color-success-foreground: #ffffff; /* white */
+    
+    --color-warning: #f59e0b; /* amber-500 */
+    --color-warning-foreground: #ffffff; /* white */
+    
+    --color-error: #ef4444; /* red-500 */
+    --color-error-foreground: #ffffff; /* white */
+    
+    --color-destructive: #ef4444; /* red-500 */
+    --color-destructive-foreground: #ffffff; /* white */
+    
+    /* Additional Semantic Colors */
+    --color-info: #3b82f6; /* blue-500 */
+    --color-info-foreground: #ffffff; /* white */
+    
+    /* Spacing & Layout */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --color-background: #0a0a0a; /* deeper-black */
+    --color-foreground: #f8fafc; /* slate-50 */
+    
+    --color-card: #141414; /* darker-gray */
+    --color-card-foreground: #f8fafc; /* slate-50 */
+    
+    --color-popover: #141414; /* darker-gray */
+    --color-popover-foreground: #f8fafc; /* slate-50 */
+    
+    --color-muted: #262626; /* darker-medium-gray */
+    --color-muted-foreground: #94a3b8; /* slate-400 */
+    
+    --color-border: rgba(139, 92, 246, 0.3); /* purple-500 with higher opacity */
+    --color-input: rgba(139, 92, 246, 0.3); /* purple-500 with higher opacity */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+  }
+
+  code, pre {
+    font-family: 'Fira Code', monospace;
+  }
+}
+
+@layer components {
+  /* Header Styles */
+  .header {
+    @apply fixed top-0 left-0 right-0 z-50 bg-card shadow-md;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .header-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .header-content {
+    @apply flex items-center justify-between h-16;
+  }
+
+  .header-logo {
+    @apply flex items-center gap-3;
+  }
+
+  .header-logo-icon {
+    @apply w-10 h-10 rounded-lg flex items-center justify-center;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+  }
+
+  .header-logo-text {
+    @apply text-xl font-bold text-foreground;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .header-nav {
+    @apply hidden lg:flex items-center gap-1;
+  }
+
+  .header-nav-link {
+    @apply px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground transition-all duration-300;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .header-nav-link:hover {
+    @apply text-foreground bg-muted;
+  }
+.header-nav-link.active  {
+    @apply text-primary;
+  }
+
+  .header-mobile-toggle {
+    @apply lg:hidden p-2 rounded-lg text-foreground hover:bg-muted transition-colors duration-200;
+  }
+
+  .header-mobile-menu {
+    @apply lg:hidden fixed inset-0 z-40 bg-background;
+    top: 64px;
+  }
+
+  .header-mobile-nav {
+    @apply flex flex-col p-4 gap-2;
+  }
+
+  .header-mobile-link {
+    @apply px-4 py-3 rounded-lg text-base font-medium text-muted-foreground transition-all duration-300;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .header-mobile-link:hover {
+    @apply text-foreground bg-muted;
+  }
+.header-mobile-link.active  {
+    @apply text-primary;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+::-webkit-scrollbar-thumb  {
+    @apply rounded-full;
+  }
+::-webkit-scrollbar-thumb:hover  {
+    
+  }
+
+  /* Selection */
+::selection  {
+    @apply text-foreground;
+  }
+
+  /* Focus Visible */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer utilities {
+  /* Typography Utilities */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  }
+
+  /* Animation Utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  /* Shadow Utilities */
+  .shadow-purple {
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1);
+  }
+
+  .shadow-purple-lg {
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.15);
+  }
+
+  /* Border Utilities */
+  .border-gradient {
+    border: 1px solid transparent;
+    background: linear-gradient(var(--color-card), var(--color-card)) padding-box,
+                linear-gradient(135deg, var(--color-primary), var(--color-secondary)) border-box;
+  }
+}

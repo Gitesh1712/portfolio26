@@ -1,0 +1,29 @@
+# MacOS
+.DS_Store
+
+# Node / NPM
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.npmrc
+
+# Build output
+/build/
+dist/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.iml
+
+# Vite temporary / cache
+vite.config.*.s.*
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+logs/
