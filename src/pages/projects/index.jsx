@@ -430,7 +430,7 @@ const Projects = () => {
               <span className="text-sm font-medium text-primary">Portfolio Showcase</span>
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-              Project Universe
+              Projects Universe
             </h1>
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
               Explore my comprehensive collection of full-stack projects, featuring detailed case studies, live demonstrations, and technical deep-dives into modern web development solutions

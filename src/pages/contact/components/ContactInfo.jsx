@@ -6,24 +6,24 @@ const ContactInfo = () => {
     {
       icon: 'Mail',
       label: 'Email',
-      value: 'gitesh.dev@example.com',
+      value: 'giteshb260@gmail.com',
       description: 'Best for detailed inquiries',
-      link: 'mailto:gitesh.dev@example.com',
+      link: 'mailto:giteshb260@gmail.com',
       responseTime: '24 hours'
     },
     {
       icon: 'Phone',
       label: 'Phone',
-      value: '+1 (555) 123-4567',
+      value: '+91 7081833800',
       description: 'For urgent matters only',
-      link: 'tel:+15551234567',
+      link: 'tel:+917081833800',
       responseTime: 'Same day'
     },
     {
       icon: 'MapPin',
       label: 'Location',
-      value: 'San Francisco, CA',
-      description: 'Available for remote work',
+      value: 'Noida,Uttar Pradesh',
+      description: 'Available for work , remote and otherwise',
       link: null,
       responseTime: 'Global timezone'
     },
@@ -62,8 +62,8 @@ const ContactInfo = () => {
     {
       icon: 'Mail',
       label: 'Email',
-      username: 'gitesh.dev@example.com',
-      link: 'mailto:gitesh.dev@example.com',
+      username: 'giteshb260@gmail.com',
+      link: 'mailto:giteshb260@gmail.com',
       color: 'var(--color-error)'
     }
   ];

@@ -11,12 +11,12 @@ const FAQSection = () => {
     },
     {
       question: "What types of projects do you accept?",
-      answer: "I specialize in full-stack web development, React applications, Spring Boot backends, API integrations, and system architecture. I accept projects ranging from small feature implementations to complete application development. Minimum project size is typically $5,000."
+      answer: "I specialize in full-stack web development, React applications, Spring Boot/Express.Js backends, API integrations, and system architecture. I accept projects ranging from small feature implementations to complete application development."
     },
-    {
-      question: "Do you work with international clients?",
-      answer: "Yes! I work with clients worldwide and am flexible with timezone adjustments for meetings and calls. I have experience collaborating with teams across North America, Europe, and Asia."
-    },
+    // {
+    //   question: "Do you work with international clients?",
+    //   answer: "Yes! I work with clients worldwide and am flexible with timezone adjustments for meetings and calls. I have experience collaborating with teams across North America, Europe, and Asia."
+    // },
     {
       question: "What is your availability for new projects?",
       answer: "I'm currently accepting new projects with start dates in the next 2-4 weeks. For urgent projects, please mention this in your inquiry, and I'll do my best to accommodate your timeline."
@@ -99,7 +99,7 @@ const FAQSection = () => {
               Don't hesitate to reach out! I'm happy to discuss your project requirements, provide technical consultation, or answer any specific questions you may have.
             </p>
             <a
-              href="mailto:gitesh.dev@example.com"
+              href="mailto:giteshb260@gmail.com"
               className="inline-flex items-center gap-2 text-sm md:text-base text-primary hover:text-secondary transition-colors duration-200 font-medium"
             >
               Send me an email

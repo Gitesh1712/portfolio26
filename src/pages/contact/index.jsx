@@ -54,11 +54,11 @@ const Contact = () => {
             </h1>
             
             <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Have a project in mind? Looking for a reliable developer? Or just want to say hello?\nI'm always open to discussing new opportunities and collaborations.
+              Have a project in mind? Looking for a reliable developer? Or just want to say hello? I'm always open to discussing new opportunities and collaborations.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-16 lg:mb-20">
+          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-16 lg:mb-20">
             {stats?.map((stat, index) => (
               <div
                 key={index}
@@ -72,7 +72,7 @@ const Contact = () => {
                 <div className="text-xs text-muted-foreground">{stat?.description}</div>
               </div>
             ))}
-          </div>
+          </div> */}
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 mb-12 md:mb-16 lg:mb-20">
             <div className="lg:col-span-2">
