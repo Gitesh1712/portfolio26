@@ -13,10 +13,10 @@ const SkillsPreview = () => {
       icon: 'Layout',
       color: 'var(--color-primary)',
       skills: [
-        { name: 'React', level: 95, icon: 'Code2' },
-        { name: 'JavaScript', level: 92, icon: 'FileCode' },
-        { name: 'TypeScript', level: 88, icon: 'FileType' },
-        { name: 'Tailwind CSS', level: 90, icon: 'Palette' }
+        { name: 'React', level: 65, icon: 'Code2' },
+        { name: 'JavaScript', level: 60, icon: 'FileCode' },
+        { name: 'TypeScript', level: 69, icon: 'FileType' },
+        { name: 'Tailwind CSS', level: 65, icon: 'Palette' }
       ]
     },
     {
@@ -24,7 +24,7 @@ const SkillsPreview = () => {
       icon: 'Server',
       color: 'var(--color-secondary)',
       skills: [
-        { name: 'Spring Boot', level: 93, icon: 'Database' },
+        { name: 'Spring Boot', level: 85, icon: 'Database' },
         { name: 'Node.js', level: 89, icon: 'Cpu' },
         { name: 'PostgreSQL', level: 87, icon: 'HardDrive' },
         { name: 'REST APIs', level: 94, icon: 'Globe' }
@@ -35,10 +35,11 @@ const SkillsPreview = () => {
       icon: 'Cloud',
       color: 'var(--color-accent)',
       skills: [
-        { name: 'AWS', level: 85, icon: 'CloudCog' },
-        { name: 'Docker', level: 82, icon: 'Container' },
+        { name: 'AWS', level: 40, icon: 'CloudCog' },
+        // { name: 'Docker', level: 30, icon: 'Container' },
+        { name: 'VPS', level: 91, icon: 'Server' },
         { name: 'Git', level: 91, icon: 'GitBranch' },
-        { name: 'CI/CD', level: 80, icon: 'Workflow' }
+        // { name: 'CI/CD', level: 20, icon: 'Workflow' }
       ]
     }
   ];

@@ -41,8 +41,8 @@ const HeroSection = () => {
   const stats = [
     { value: '350+', label: 'LeetCode Problems', icon: 'Code2' },
     { value: '300+', label: 'GeeksforGeeks Solutions', icon: 'Trophy' },
-    { value: '5+', label: 'Years Experience', icon: 'Briefcase' },
-    { value: '20+', label: 'Projects Delivered', icon: 'Rocket' }
+    { value: '3+', label: 'Years Experience', icon: 'Briefcase' },
+    { value: '10+', label: 'Projects Delivered', icon: 'Rocket' }
   ];
 
   return (

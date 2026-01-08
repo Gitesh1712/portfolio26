@@ -10,51 +10,51 @@ const ExperienceTimeline = () => {
     {
       id: 1,
       role: 'Senior Software Engineer',
-      company: 'Tech Innovations Inc.',
-      period: '2023 - Present',
-      location: 'Remote',
+      company: 'SPIWD Pareekshn',
+      period: '2024 - Present',
+      location: 'Noida',
       description: 'Leading full-stack development of enterprise applications, mentoring junior developers, and architecting scalable microservices solutions.',
       achievements: [
         'Reduced application load time by 60% through optimization',
         'Led migration to microservices architecture',
-        'Mentored team of 5 junior developers'
+        'Mentored team of 3 junior developers'
       ],
-      technologies: ['React', 'Spring Boot', 'AWS', 'PostgreSQL'],
+      technologies: ['React', 'Spring Boot','Node.js', 'AWS','PostgreSQL','MySql'],
       icon: 'Briefcase',
       color: 'var(--color-primary)'
     },
     {
-      id: 2,
-      role: 'Full Stack Developer',
-      company: 'Digital Solutions Ltd.',
-      period: '2021 - 2023',
-      location: 'Hybrid',
-      description: 'Developed and maintained multiple client-facing applications, implemented CI/CD pipelines, and improved code quality standards.',
-      achievements: [
-        'Built 10+ production-ready applications',
-        'Implemented automated testing reducing bugs by 40%',
-        'Established coding standards and best practices'
-      ],
-      technologies: ['React', 'Node.js', 'MongoDB', 'Docker'],
-      icon: 'Code2',
-      color: 'var(--color-secondary)'
+    id: 2,
+    role: 'Junior Software Developer',
+    company: 'Your Webstore',
+    period: '2022-2023',
+    location: 'Hybrid',
+    description: 'Assisted in developing and maintaining client-facing web applications, worked on bug fixes and small feature enhancements, and followed existing CI/CD and coding practices.',
+    achievements: [
+      'Contributed to multiple production web applications',
+      'Wrote basic unit tests and assisted in bug fixing',
+      'Followed team coding standards and best practices'
+    ],
+    technologies: ['Vanilla JS','Java','Spring Boot','MySQL'],
+    icon: 'Code2',
+    color: 'var(--color-secondary)'
     },
-    {
-      id: 3,
-      role: 'Software Developer',
-      company: 'StartUp Ventures',
-      period: '2019 - 2021',
-      location: 'On-site',
-      description: 'Contributed to product development from concept to launch, collaborated with cross-functional teams, and delivered features on tight deadlines.',
-      achievements: [
-        'Launched MVP in 3 months',
-        'Integrated payment gateway and analytics',
-        'Achieved 99.9% uptime in production'
-      ],
-      technologies: ['JavaScript', 'Express', 'MySQL', 'Git'],
-      icon: 'Rocket',
-      color: 'var(--color-accent)'
-    }
+    // {
+    //   id: 3,
+    //   role: 'Software Developer',
+    //   company: 'StartUp Ventures',
+    //   period: '2019 - 2021',
+    //   location: 'On-site',
+    //   description: 'Contributed to product development from concept to launch, collaborated with cross-functional teams, and delivered features on tight deadlines.',
+    //   achievements: [
+    //     'Launched MVP in 3 months',
+    //     'Integrated payment gateway and analytics',
+    //     'Achieved 99.9% uptime in production'
+    //   ],
+    //   technologies: ['JavaScript', 'Express', 'MySQL', 'Git'],
+    //   icon: 'Rocket',
+    //   color: 'var(--color-accent)'
+    // }
   ];
 
   return (
@@ -69,7 +69,7 @@ const ExperienceTimeline = () => {
             Professional Experience
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
-            5+ years of building impactful solutions across diverse industries
+            A versatile developer with 2+ years of experience building specialized solutions
           </p>
         </div>
 
