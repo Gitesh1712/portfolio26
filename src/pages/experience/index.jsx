@@ -86,12 +86,12 @@ const Experience = () => {
       role: "Junior Software Developer",
       company: "Your Webstore",
       companyLogo:
-        "https://img.rocket.new/generatedImages/rocket_gen_img_1deaeeb0d-1767076524125.png",
+        "https://yourwebstore.in/wp-content/uploads/2022/02/yourwebstore-3-200x80.png",
       companyLogoAlt: "Modern office space with collaborative work environment",
       companyDescription:
         "Small but growing e-commerce platform focused on online retail and customer experience",
-      duration: "Jun 2020 - Feb 2022",
-      location: "Pune, India",
+      duration: "Jan 2023 - Dec 2023",
+      location: "Noida, India",
       isCurrent: false,
       responsibilities: [
         "Developed product listing and cart components using React",
@@ -146,25 +146,25 @@ const Experience = () => {
   const careerStats = [
     {
       icon: "Briefcase",
-      value: "4+",
+      value: "3+",
       label: "Years Experience",
       description: "Progressive career growth in software development",
     },
     {
       icon: "FolderGit2",
-      value: "30+",
+      value: "15+",
       label: "Projects Delivered",
       description: "Successfully completed client and internal projects",
     },
     {
       icon: "Users",
-      value: "500K+",
+      value: "10K+",
       label: "Users Impacted",
       description: "Total users served across all applications",
     },
     {
       icon: "Award",
-      value: "12+",
+      value: "10gi+",
       label: "Technologies Mastered",
       description: "Expertise across full-stack development",
     },
