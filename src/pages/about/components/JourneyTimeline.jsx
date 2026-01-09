@@ -9,7 +9,7 @@ const JourneyTimeline = () => {
       id: 1,
       year: "2026",
       title: "Senior Software Engineer",
-      company: "Tech Innovations Inc.",
+      company: "Pareekshn SPIWD",
       type: "career",
       icon: "Briefcase",
       color: "var(--color-primary)",
@@ -24,8 +24,8 @@ const JourneyTimeline = () => {
     {
       id: 2,
       year: "2025",
-      title: "Full-Stack Developer",
-      company: "Digital Solutions Ltd.",
+      title: "Software Development Engineer-Full-Stack",
+      company: "Pareekshn SPIWD",
       type: "career",
       icon: "Code",
       color: "var(--color-secondary)",
@@ -40,7 +40,7 @@ const JourneyTimeline = () => {
     {
       id: 3,
       year: "2024",
-      title: "React Mastery",
+      title: "Frontend Proficiency",
       company: "Self-Learning Journey",
       type: "learning",
       icon: "GraduationCap",
@@ -71,34 +71,36 @@ const JourneyTimeline = () => {
     },
     {
       id: 5,
-      year: "2022",
-      title: "Software Developer",
-      company: "StartUp Ventures",
+      year: "2023",
+      title: "Junior Software Engineer",
+      company: "Your Webstore",
       type: "career",
       icon: "Rocket",
       color: "var(--color-secondary)",
       summary: "Started professional journey in software development",
       details: "Joined a fast-paced startup environment where I learned to adapt quickly and deliver under pressure. Worked on diverse projects ranging from web applications to mobile backends. Gained hands-on experience with agile methodologies and modern development practices.",
       achievements: [
-        "Shipped 5 major features in first year",
-        "Reduced bug count by 35%",
-        "Learned 4 new technologies"
+        "Learned how real-world development workflows operate in a startup environment",
+        "Improved understanding of writing cleaner and more maintainable code",
+        "Gained experience working with team feedback and code reviews",
+        "Built confidence in debugging and fixing issues independently",
+        "Adapted quickly to new tools and technologies used in the project"
       ]
     },
     {
       id: 6,
-      year: "2021",
-      title: "Computer Science Degree",
-      company: "University of Technology",
+      year: "2022",
+      title: "Computer Science & Engineering Degree",
+      company: "IMS Engineering College - AKTU University",
       type: "education",
       icon: "BookOpen",
       color: "var(--color-accent)",
-      summary: "Graduated with honors in Computer Science",
+      summary: "Graduated in CSE",
       details: "Completed comprehensive coursework in software engineering, algorithms, databases, and system design. Led multiple team projects and participated in hackathons. Built strong foundation in computer science fundamentals.",
       achievements: [
-        "Graduated with 3.8 GPA",
-        "Won 2 university hackathons",
-        "Published research paper on ML algorithms"
+        "Graduated with 7.8 GPA",
+        "Won 2 College hackathons",
+        "Ranked in Top 5 in College -GFG Rankings"
       ]
     }
   ];
@@ -150,9 +152,8 @@ const JourneyTimeline = () => {
 
                 {/* Content Card */}
                 <div
-                  className={`border rounded-xl overflow-hidden transition-all duration-300 ${getTypeStyles(milestone?.type)} ${
-                    expandedId === milestone?.id ? 'shadow-purple-lg' : 'hover:shadow-purple'
-                  }`}
+                  className={`border rounded-xl overflow-hidden transition-all duration-300 ${getTypeStyles(milestone?.type)} ${expandedId === milestone?.id ? 'shadow-purple-lg' : 'hover:shadow-purple'
+                    }`}
                 >
                   <button
                     onClick={() => toggleExpand(milestone?.id)}

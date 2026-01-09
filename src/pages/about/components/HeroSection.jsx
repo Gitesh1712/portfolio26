@@ -54,14 +54,14 @@ const HeroSection = () => {
                 <div className="text-xs md:text-sm text-muted-foreground mt-1">GFG Solutions</div>
               </div>
               <div className="text-center p-3 md:p-4 bg-card/50 border border-border rounded-lg">
-                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-accent">5+</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-accent">3+</div>
                 <div className="text-xs md:text-sm text-muted-foreground mt-1">Years Experience</div>
               </div>
             </div>
           </div>
 
           {/* Right Image */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+          {/* <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-md lg:max-w-lg">
               <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-2xl blur-2xl opacity-20"></div>
               <div className="relative aspect-square rounded-2xl overflow-hidden border-2 border-primary/20 shadow-purple-lg">
@@ -73,7 +73,7 @@ const HeroSection = () => {
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 md:w-32 md:h-32 bg-primary/20 rounded-full blur-xl"></div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>);
