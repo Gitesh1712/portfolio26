@@ -21,7 +21,7 @@ const ProjectCard = ({ project, onViewDetails }) => {
         <div className={`absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`} />
         
         <div className={`absolute top-4 right-4 flex gap-2 transition-all duration-500 ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
-          {project?.liveUrl && (
+          {/* {project?.liveUrl && (
             <a
               href={project?.liveUrl}
               target="_blank"
@@ -31,7 +31,7 @@ const ProjectCard = ({ project, onViewDetails }) => {
             >
               <Icon name="ExternalLink" size={20} color="#ffffff" />
             </a>
-          )}
+          )} */}
           {project?.githubUrl && (
             <a
               href={project?.githubUrl}
@@ -81,6 +81,8 @@ const ProjectCard = ({ project, onViewDetails }) => {
           )}
         </div>
 
+        {/* 
+        ============================PROJECT STATS REMOVED============================
         <div className="grid grid-cols-3 gap-2 md:gap-3 mb-4 pb-4 border-b border-border">
           <div className="text-center">
             <div className="flex items-center justify-center gap-1 mb-1">
@@ -109,7 +111,7 @@ const ProjectCard = ({ project, onViewDetails }) => {
             </div>
             <p className="text-xs text-muted-foreground">Rating</p>
           </div>
-        </div>
+        </div> */}
 
         <Button
           variant="outline"

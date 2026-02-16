@@ -49,7 +49,7 @@ const ProjectModal = ({ project, onClose }) => {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-            <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-2">
+            {/* <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-2">
               {project?.liveUrl && (
                 <a
                   href={project?.liveUrl}
@@ -72,7 +72,7 @@ const ProjectModal = ({ project, onClose }) => {
                   View Code
                 </a>
               )}
-            </div>
+            </div> */}
           </div>
 
           <div className="p-4 md:p-6 lg:p-8">
@@ -273,6 +273,8 @@ const ProjectModal = ({ project, onClose }) => {
                   ))}
                 </div>
 
+                {/* 
+                ==================TESTIMONIAL SECTION REMOVED==================
                 <div>
                   <h3 className="text-lg md:text-xl font-semibold text-foreground mb-3">
                     Testimonial
@@ -297,7 +299,7 @@ const ProjectModal = ({ project, onClose }) => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             )}
           </div>

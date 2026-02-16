@@ -69,7 +69,7 @@ const ExperienceTimeline = () => {
             Professional Experience
           </h2>
           <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
-            A versatile developer with 2+ years of experience building specialized solutions
+            A versatile developer with 3+ years of experience building specialized solutions
           </p>
         </div>
 

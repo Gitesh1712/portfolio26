@@ -8,11 +8,21 @@ import CertificationBadge from './components/CertificationBadge';
 import SkillRelationshipMap from './components/SkillRelationshipMap';
 import LearningPathCard from './components/LearningPathCard';
 import SkillComparisonMode from './components/SkillComparisonMode';
+import resumeFile from '../../assets/docs/Gitesh_cv26Jan.pdf';
 
 const Skills = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSkill, setSelectedSkill] = useState(null);
   const [viewMode, setViewMode] = useState('grid');
+
+  const handleDownloadResume = () => {
+    const anchor = document.createElement('a');
+    anchor.href = resumeFile;
+    anchor.download = 'Gitesh_cv26Jan.pdf';
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+  };
 
   const categories = ['All', 'Frontend', 'Backend', 'Database', 'Cloud & DevOps', 'Tools & Others'];
 
@@ -588,7 +598,7 @@ const Skills = () => {
             <TechnologyTimeline timelineData={timelineData} />
           </div>
 
-          <div>
+          {/* <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                 <Icon name="Award" size={20} color="#ffffff" strokeWidth={2} />
@@ -603,7 +613,7 @@ const Skills = () => {
               <CertificationBadge key={cert?.id} certification={cert} />
               )}
             </div>
-          </div>
+          </div> */}
 
           <div className="mt-12 bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-xl p-6 md:p-8">
             <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
@@ -622,7 +632,7 @@ const Skills = () => {
                     <Icon name="Mail" size={18} strokeWidth={2} />
                     <span>Get in Touch</span>
                   </button>
-                  <button className="px-6 py-3 bg-card border border-border text-foreground rounded-lg font-medium hover:bg-muted transition-colors duration-200 flex items-center justify-center gap-2">
+                  <button onClick={handleDownloadResume} className="px-6 py-3 bg-card border border-border text-foreground rounded-lg font-medium hover:bg-muted transition-colors duration-200 flex items-center justify-center gap-2">
                     <Icon name="Download" size={18} strokeWidth={2} />
                     <span>Download Resume</span>
                   </button>

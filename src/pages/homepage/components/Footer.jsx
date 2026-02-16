@@ -16,10 +16,10 @@ const Footer = () => {
       { label: 'Contact', path: '/contact' }
     ],
     social: [
-      { icon: 'Github', label: 'GitHub', url: 'https://github.com' },
+      { icon: 'Github', label: 'GitHub', url: 'https://github.com/Gitesh1712' },
       { icon: 'Linkedin', label: 'LinkedIn', url: 'https://linkedin.com' },
       { icon: 'Twitter', label: 'Twitter', url: 'https://twitter.com' },
-      { icon: 'Mail', label: 'Email', url: 'mailto:gitesh.dev@example.com' }
+      { icon: 'Mail', label: 'Email', url: 'mailto:giteshb260@gmail.ccom' }
     ]
   };
 

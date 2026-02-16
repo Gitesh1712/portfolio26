@@ -24,10 +24,10 @@ const FeaturedProjects = () => {
   },
   {
     id: 2,
-    title: 'Real-Time Analytics Dashboard',
-    description: 'Enterprise-grade analytics platform with live data visualization, custom reporting, and predictive insights. Handles millions of data points with sub-second query performance.',
+    title: 'MediaCMS Platform',
+    description: 'Full-stack CMS for a media company with a public website and admin panel for managing posts, layouts, themes, and users.',
     image: "https://img.rocket.new/generatedImages/rocket_gen_img_11b6b117c-1767258777980.png",
-    imageAlt: 'Professional analytics dashboard displaying colorful charts, graphs, and data visualization panels with real-time metrics on large monitor',
+    imageAlt: 'Admin panel dashboard showing post previews, layout tools, and user management',
     tags: ['React', 'Node.js', 'MongoDB', 'D3.js'],
     metrics: [
     { label: 'Data Points', value: '5M+', icon: 'Database' },

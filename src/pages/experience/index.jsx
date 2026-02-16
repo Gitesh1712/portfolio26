@@ -7,6 +7,7 @@ import TimelineItem from "./components/TimelineItem";
 import StatsCard from "./components/StatsCard";
 import CertificationCard from "./components/CertificationCard";
 import SkillEvolutionChart from "./components/SkillEvolutionChart";
+import resumeFile from "../../assets/docs/Gitesh_cv26Jan.pdf";
 
 const Experience = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -240,8 +241,12 @@ const Experience = () => {
   ];
 
   const handleDownloadResume = () => {
-    // Mock resume download functionality
-    console.log("Downloading resume...");
+    const anchor = document.createElement("a");
+    anchor.href = resumeFile;
+    anchor.download = "Gitesh_cv26Jan.pdf";
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
   };
 
   const filteredExperiences =
@@ -347,7 +352,7 @@ const Experience = () => {
         </section> */}
 
         {/* Certifications */}
-        <section className="pb-12 px-4 md:pb-16 md:px-6 lg:pb-20 lg:px-8">
+        {/* <section className="pb-12 px-4 md:pb-16 md:px-6 lg:pb-20 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-8 md:mb-12 lg:mb-16">
               <h2 className="text-2xl font-bold text-foreground mb-3 md:text-3xl lg:text-4xl">
@@ -363,7 +368,7 @@ const Experience = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* CTA Section */}
         <section className="pb-16 px-4 md:pb-20 md:px-6 lg:pb-24 lg:px-8">
