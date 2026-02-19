@@ -154,8 +154,8 @@ const Experience = () => {
     {
       icon: "FolderGit2",
       value: "15+",
-      label: "Projects Delivered",
-      description: "Successfully completed client and internal projects",
+      label: "Projects Worked On",
+      description: "Successfully completed projects accross various domains and technologies",
     },
     {
       icon: "Users",
@@ -165,7 +165,7 @@ const Experience = () => {
     },
     {
       icon: "Award",
-      value: "10gi+",
+      value: "10+",
       label: "Technologies Mastered",
       description: "Expertise across full-stack development",
     },

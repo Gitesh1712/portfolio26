@@ -20,8 +20,8 @@ const CTASection = () => {
     {
       icon: 'Mail',
       label: 'Email',
-      value: 'gitesh.dev@example.com',
-      action: () => window.location.href = 'mailto:gitesh.dev@example.com'
+      value: 'giteshb260@gmail.com',
+      action: () => window.location.href = 'mailto:giteshb260@gmail.com'
     },
     {
       icon: 'Linkedin',

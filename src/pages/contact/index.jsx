@@ -103,7 +103,7 @@ const Contact = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="mailto:gitesh.dev@example.com"
+                href="mailto:giteshb260@gmail.com"
                 className="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all duration-300 shadow-purple text-sm md:text-base"
               >
                 <Icon name="Mail" size={20} />

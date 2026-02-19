@@ -103,7 +103,7 @@ const FeaturedProjects = () => {
                 )}
                 </div>
 
-                <div className="grid grid-cols-3 gap-3 md:gap-4 pt-4 md:pt-6 border-t border-border">
+                {/* <div className="grid grid-cols-3 gap-3 md:gap-4 pt-4 md:pt-6 border-t border-border">
                   {project?.metrics?.map((metric, index) =>
                 <div key={index} className="text-center">
                       <div className="flex justify-center mb-1 md:mb-2">
@@ -117,7 +117,7 @@ const FeaturedProjects = () => {
                       </div>
                     </div>
                 )}
-                </div>
+                </div> */}
               </div>
             </div>
           )}
