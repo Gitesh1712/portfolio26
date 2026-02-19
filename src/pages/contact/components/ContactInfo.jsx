@@ -49,7 +49,7 @@ const ContactInfo = () => {
       icon: 'Github',
       label: 'GitHub',
       username: '@giteshdev',
-      link: 'https://github.com/giteshdev',
+      link: 'https://github.com/Gitesh1712',
       color: 'var(--color-foreground)'
     },
     {

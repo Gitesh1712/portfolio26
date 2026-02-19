@@ -98,7 +98,7 @@
         "WebSocket",
       ],
       liveUrl: "https://ecommerce-demo.giteshdev.com",
-      githubUrl: "https://github.com/giteshdev/ecommerce-platform",
+      githubUrl: "https://github.com/Gitesh1712/ecommerce-platform",
       metrics: {
         users: "15K+",
         performance: "98/100",
@@ -174,7 +174,7 @@
         "Docker",
       ],
       liveUrl: "https://healthcare-demo.giteshdev.com",
-      githubUrl: "https://github.com/giteshdev/healthcare-system",
+      githubUrl: "https://github.com/Gitesh1712/healthcare-system",
       metrics: {
         users: "8K+",
         performance: "96/100",
@@ -250,7 +250,7 @@
         "Docker",
       ],
       liveUrl: "https://analytics-demo.giteshdev.com",
-      githubUrl: "https://github.com/giteshdev/social-analytics",
+      githubUrl: "https://github.com/Gitesh1712/social-analytics",
       metrics: {
         users: "5K+",
         performance: "94/100",
@@ -325,7 +325,7 @@
         "Kubernetes",
       ],
       liveUrl: "https://realestate-demo.giteshdev.com",
-      githubUrl: "https://github.com/giteshdev/property-management",
+      githubUrl: "https://github.com/Gitesh1712/property-management",
       metrics: {
         users: "3K+",
         performance: "95/100",
@@ -401,7 +401,7 @@
         "Redis",
       ],
       liveUrl: "https://lms-demo.giteshdev.com",
-      githubUrl: "https://github.com/giteshdev/learning-management",
+      githubUrl: "https://github.com/Gitesh1712/learning-management",
       metrics: {
         users: "12K+",
         performance: "93/100",
@@ -476,7 +476,7 @@
         "RabbitMQ",
       ],
       liveUrl: "https://restaurant-demo.giteshdev.com",
-      githubUrl: "https://github.com/giteshdev/restaurant-management",
+      githubUrl: "https://github.com/Gitesh1712/restaurant-management",
       metrics: {
         users: "2K+",
         performance: "96/100",

@@ -112,7 +112,7 @@ const Projects = () => {
         "WebSocket",
       ],
       liveUrl: "https://ecommerce-demo.giteshdev.com",
-      githubUrl: "https://github.com/giteshdev/ecommerce-platform",
+      githubUrl: "https://github.com/Gitesh1712/ecommerce-platform",
       metrics: {
         users: "15K+",
         performance: "98/100",
@@ -188,7 +188,7 @@ const Projects = () => {
         "Docker",
       ],
       liveUrl: "https://analytics-demo.giteshdev.com",
-      githubUrl: "https://github.com/giteshdev/social-analytics",
+      githubUrl: "https://github.com/Gitesh1712/social-analytics",
       metrics: {
         users: "5K+",
         performance: "94/100",
@@ -264,7 +264,7 @@ const Projects = () => {
         "Redis",
       ],
       liveUrl: "https://lms-demo.giteshdev.com",
-      githubUrl: "https://github.com/giteshdev/learning-management",
+      githubUrl: "https://github.com/Gitesh1712/learning-management",
       metrics: {
         users: "12K+",
         performance: "93/100",
