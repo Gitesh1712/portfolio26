@@ -7,100 +7,69 @@ const JourneyTimeline = () => {
   const milestones = [
     {
       id: 1,
-      year: "2026",
+      year: "2024",
       title: "Senior Software Engineer",
-      company: "Pareekshn SPIWD",
+      company: "Pareekshn Online Assessments",
       type: "career",
       icon: "Briefcase",
       color: "var(--color-primary)",
-      summary: "Leading full-stack development initiatives and mentoring junior developers",
-      details: "Spearheading the architecture and development of scalable microservices using Spring Boot and React. Successfully reduced system latency by 40% through optimization strategies. Mentoring a team of 5 junior developers and conducting code reviews to maintain high code quality standards.",
+      summary: "Designing scalable systems and delivering production-grade government and assessment platforms",
+      details: "Designing and delivering scalable systems using Spring Boot and Node.js, building secure REST APIs, optimizing MySQL queries, and handling concurrency for high-load workflows. Delivered the BIADA government survey platform and the Pareekshn assessment admin panel — both production systems with real-world impact.",
       achievements: [
-        "Architected microservices handling 1M+ daily requests",
-        "Reduced deployment time by 60% with CI/CD pipeline",
-        "Mentored 5 developers to senior positions"
+        "Delivered production-grade government survey platform for BIADA",
+        "Engineered real-time scoring engine for concurrent multi-role assessments",
+        "Automated PDF/Excel result generation cutting multi-hour manual effort per cycle",
+        "Implemented AES-256 encryption, geo-fencing, and RBAC for government data security"
       ]
     },
     {
       id: 2,
-      year: "2025",
-      title: "Software Development Engineer-Full-Stack",
-      company: "Pareekshn SPIWD",
-      type: "career",
-      icon: "Code",
-      color: "var(--color-secondary)",
-      summary: "Built enterprise-level applications with React and Spring Boot",
-      details: "Developed and maintained multiple client-facing applications serving 100K+ users. Implemented responsive designs and optimized performance across all platforms. Collaborated with cross-functional teams to deliver projects on time and within budget.",
+      year: "2024",
+      title: "RAG Chatbot Side Project",
+      company: "Self-Initiated",
+      type: "achievement",
+      icon: "Brain",
+      color: "var(--color-accent)",
+      summary: "Built a citation-enforced RAG pipeline for legal document Q&A",
+      details: "Designed a RAG pipeline for structured legal document Q&A using FastAPI + PostgreSQL + pgvector. Built structure-aware chunking with legal section detection, BAAI/bge-large-en embeddings, and a retrieval confidence gate to prevent hallucinations. Containerized with Docker Compose, supporting GPT-4, Gemini, Claude, and local Llama 3.",
       achievements: [
-        "Delivered 15+ production-ready applications",
-        "Improved page load times by 50%",
-        "Achieved 98% client satisfaction rate"
+        "Retrieval confidence gate — LLM never called on low-similarity results",
+        "Structure-aware chunking preserving legal document hierarchy",
+        "Pluggable LLM providers: GPT-4, Gemini, Claude, Llama 3",
+        "Fully containerized with Docker Compose + NGINX"
       ]
     },
     {
       id: 3,
-      year: "2024",
-      title: "Frontend Proficiency",
-      company: "Self-Learning Journey",
-      type: "learning",
-      icon: "GraduationCap",
-      color: "var(--color-accent)",
-      summary: "Deep dive into React ecosystem and modern web development",
-      details: "Completed advanced React courses and built multiple personal projects. Mastered React Hooks, Context API, Redux, and modern state management patterns. Contributed to open-source React projects and shared knowledge through technical blogs.",
-      achievements: [
-        "Built 10+ React projects from scratch",
-        "Contributed to 5 open-source repositories",
-        "Published 8 technical articles on React patterns"
-      ]
-    },
-    {
-      id: 4,
       year: "2023",
       title: "LeetCode Milestone",
       company: "Problem Solving Journey",
       type: "achievement",
       icon: "Trophy",
       color: "var(--color-primary)",
-      summary: "Crossed 350+ problems solved on LeetCode",
-      details: "Dedicated consistent effort to mastering data structures and algorithms. Achieved top 5% ranking in multiple coding contests. Developed strong problem-solving skills applicable to real-world software challenges.",
+      summary: "Crossed 350+ problems on LeetCode and 300+ on GeeksforGeeks",
+      details: "Dedicated consistent effort to mastering data structures, algorithms, and system-level problem solving. Achieved strong proficiency in array manipulation, trees, graphs, dynamic programming, and concurrency patterns — directly applicable to real-world backend development.",
       achievements: [
-        "Solved 350+ LeetCode problems",
-        "Top 5% in 10+ coding contests",
-        "Mastered 15+ algorithm patterns"
+        "350+ problems solved on LeetCode",
+        "300+ solutions on GeeksforGeeks",
+        "Mastered 15+ algorithm and DSA patterns",
+        "Applied DSA knowledge to production query optimization"
       ]
     },
     {
-      id: 5,
-      year: "2023",
-      title: "Junior Software Engineer",
-      company: "Your Webstore",
-      type: "career",
-      icon: "Rocket",
-      color: "var(--color-secondary)",
-      summary: "Started professional journey in software development",
-      details: "Joined a fast-paced startup environment where I learned to adapt quickly and deliver under pressure. Worked on diverse projects ranging from web applications to mobile backends. Gained hands-on experience with agile methodologies and modern development practices.",
-      achievements: [
-        "Learned how real-world development workflows operate in a startup environment",
-        "Improved understanding of writing cleaner and more maintainable code",
-        "Gained experience working with team feedback and code reviews",
-        "Built confidence in debugging and fixing issues independently",
-        "Adapted quickly to new tools and technologies used in the project"
-      ]
-    },
-    {
-      id: 6,
+      id: 4,
       year: "2022",
-      title: "Computer Science & Engineering Degree",
-      company: "IMS Engineering College - AKTU University",
+      title: "B.Tech — Computer Science & Engineering",
+      company: "IMS Engineering College, Ghaziabad",
       type: "education",
       icon: "BookOpen",
       color: "var(--color-accent)",
-      summary: "Graduated in CSE",
-      details: "Completed comprehensive coursework in software engineering, algorithms, databases, and system design. Led multiple team projects and participated in hackathons. Built strong foundation in computer science fundamentals.",
+      summary: "Graduated in CSE with 7.3/10 GPA",
+      details: "Completed comprehensive coursework in software engineering, algorithms, databases, operating systems, and computer networks at IMS Engineering College, Ghaziabad (2018–2022). Built a strong foundation in CS fundamentals that underpins all professional engineering work.",
       achievements: [
-        "Graduated with 7.8 GPA",
-        "Won 2 College hackathons",
-        "Ranked in Top 5 in College -GFG Rankings"
+        "Graduated with 7.3/10 GPA",
+        "Coursework: DSA, OOPs, DBMS, OS, Computer Networks",
+        "B.Tech in Computer Science & Engineering (2018–2022)"
       ]
     }
   ];

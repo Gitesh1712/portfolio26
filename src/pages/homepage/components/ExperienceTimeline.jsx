@@ -10,34 +10,18 @@ const ExperienceTimeline = () => {
     {
       id: 1,
       role: 'Senior Software Engineer',
-      company: 'SPIWD Pareekshn',
-      period: '2024 - Present',
+      company: 'Pareekshn Online Assessments',
+      period: 'Jun 2024 - Present',
       location: 'Noida',
-      description: 'Leading full-stack development of enterprise applications, mentoring junior developers, and architecting scalable microservices solutions.',
+      description: 'Designing and delivering scalable systems using Spring Boot and Node.js, building secure REST APIs, optimizing MySQL queries, and handling concurrency for high-load workflows. Developing React.js interfaces with clean state management and seamless API integration.',
       achievements: [
-        'Reduced application load time by 60% through optimization',
-        'Led migration to microservices architecture',
-        'Mentored team of 3 junior developers'
+        'Built real-time scoring engine supporting concurrent multi-role assessments',
+        'Delivered production-grade government survey platform for BIADA',
+        'Automated PDF/Excel result generation cutting multi-hour manual effort per cycle'
       ],
-      technologies: ['React', 'Spring Boot','Node.js', 'AWS','PostgreSQL','MySql'],
+      technologies: ['React', 'Spring Boot', 'Node.js', 'MySQL', 'AWS', 'Docker', 'JWT', 'REST APIs'],
       icon: 'Briefcase',
       color: 'var(--color-primary)'
-    },
-    {
-    id: 2,
-    role: 'Junior Software Developer',
-    company: 'Your Webstore',
-    period: '2022-2023',
-    location: 'Hybrid',
-    description: 'Assisted in developing and maintaining client-facing web applications, worked on bug fixes and small feature enhancements, and followed existing CI/CD and coding practices.',
-    achievements: [
-      'Contributed to multiple production web applications',
-      'Wrote basic unit tests and assisted in bug fixing',
-      'Followed team coding standards and best practices'
-    ],
-    technologies: ['Vanilla JS','Java','Spring Boot','MySQL'],
-    icon: 'Code2',
-    color: 'var(--color-secondary)'
     },
     // {
     //   id: 3,

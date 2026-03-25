@@ -7,7 +7,7 @@ import TimelineItem from "./components/TimelineItem";
 import StatsCard from "./components/StatsCard";
 import CertificationCard from "./components/CertificationCard";
 import SkillEvolutionChart from "./components/SkillEvolutionChart";
-import resumeFile from "../../assets/docs/Gitesh_cv26Jan.pdf";
+import resumeFile from "../../assets/docs/Gitesh_cv_24March_SE.pdf";
 
 const Experience = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -16,22 +16,22 @@ const Experience = () => {
     {
       id: 1,
       role: "Senior Software Engineer",
-      company: "SPIWD Pareekshn",
+      company: "Pareekshn Online Assessments",
       companyLogo:
         "https://surveyadmin.pareekshn.com/assets/logo-hd-ZLVGU1mN.png",
       companyLogoAlt:
-        "Modern tech company office building with glass facade and blue sky background",
+        "Pareekshn Online Assessments company logo",
       companyDescription:
         "Pareekshn is a secure, scalable platform providing digital assessments for skills, knowledge, and aptitude",
       duration: "June 2024 - Present",
       location: "Noida, India",
       isCurrent: true,
       responsibilities: [
-        "Built and maintained scalable backend services with Spring Boot and Node.js",
-        "Developed interactive frontend features using React and jQuery for assessments",
-        "Optimized database queries and caching, improving API response times",
-        "Assisted in CI/CD setup with Jenkins and Docker for faster deployments",
-        "Collaborated with team and product managers to implement platform features",
+        "Designing and delivering scalable systems using Spring Boot and Node.js for high-load assessment workflows",
+        "Building secure REST APIs with proper authentication, authorization, and concurrency handling",
+        "Optimizing MySQL queries and database performance for large-scale data operations",
+        "Developing React.js interfaces with clean state management and seamless API integration",
+        "Handling concurrency challenges in real-time scoring engines serving concurrent assessments",
       ],
       achievements: [
         {
@@ -79,66 +79,6 @@ const Experience = () => {
             "Back-office platform with Spring Boot, JSP, JS/jQuery for managing assessments and results",
           impact:
             "Optimized database queries and real-time scoring, improving analytics speed and platform usability",
-        },
-      ],
-    },
-    {
-      id: 2,
-      role: "Junior Software Developer",
-      company: "Your Webstore",
-      companyLogo:
-        "https://yourwebstore.in/wp-content/uploads/2022/02/yourwebstore-3-200x80.png",
-      companyLogoAlt: "Modern office space with collaborative work environment",
-      companyDescription:
-        "Small but growing e-commerce platform focused on online retail and customer experience",
-      duration: "Jan 2023 - Dec 2023",
-      location: "Noida, India",
-      isCurrent: false,
-      responsibilities: [
-        "Developed product listing and cart components using React",
-        "Built RESTful APIs with Node.js and Express for orders and inventory",
-        "Fixed bugs and enhanced features based on customer feedback",
-        "Worked with design and backend teams to deliver updates on schedule",
-        "Wrote unit and integration tests to maintain code reliability",
-      ],
-
-      achievements: [
-        {
-          icon: "Code2",
-          metric: "40+",
-          description: "Features and bug fixes delivered",
-        },
-        {
-          icon: "GitBranch",
-          metric: "900+",
-          description: "Code commits supporting platform improvements",
-        },
-        {
-          icon: "CheckCircle",
-          metric: "90%",
-          description: "Test coverage maintained across key modules",
-        },
-      ],
-
-      technologies: [
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "JavaScript",
-        "React",
-        "HTML5",
-        "CSS3",
-        "Bootstrap",
-        "Git",
-      ],
-
-      projects: [
-        {
-          name: "E-Commerce Dashboard",
-          description:
-            "Built admin dashboard to manage products, orders, and inventory",
-          impact:
-            "Streamlined operations and reduced order processing time by 25%",
         },
       ],
     },
@@ -243,7 +183,7 @@ const Experience = () => {
   const handleDownloadResume = () => {
     const anchor = document.createElement("a");
     anchor.href = resumeFile;
-    anchor.download = "Gitesh_cv26Jan.pdf";
+    anchor.download = "Gitesh_cv_24March_SE.pdf";
     document.body.appendChild(anchor);
     anchor.click();
     document.body.removeChild(anchor);

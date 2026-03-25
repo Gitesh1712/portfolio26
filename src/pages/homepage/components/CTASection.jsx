@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
-import resumeFile from '../../../assets/docs/Gitesh_cv26Jan.pdf';
+import resumeFile from '../../../assets/docs/Gitesh_cv_24March_SE.pdf';
 
 const CTASection = () => {
   const navigate = useNavigate();
@@ -10,7 +10,7 @@ const CTASection = () => {
   const handleDownloadResume = () => {
     const anchor = document.createElement('a');
     anchor.href = resumeFile;
-    anchor.download = 'Gitesh_cv26Jan.pdf';
+    anchor.download = 'Gitesh_cv_24March_SE.pdf';
     document.body.appendChild(anchor);
     anchor.click();
     document.body.removeChild(anchor);

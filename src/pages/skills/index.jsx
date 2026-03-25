@@ -8,7 +8,7 @@ import CertificationBadge from './components/CertificationBadge';
 import SkillRelationshipMap from './components/SkillRelationshipMap';
 import LearningPathCard from './components/LearningPathCard';
 import SkillComparisonMode from './components/SkillComparisonMode';
-import resumeFile from '../../assets/docs/Gitesh_cv26Jan.pdf';
+import resumeFile from '../../assets/docs/Gitesh_cv_24March_SE.pdf';
 
 const Skills = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -18,7 +18,7 @@ const Skills = () => {
   const handleDownloadResume = () => {
     const anchor = document.createElement('a');
     anchor.href = resumeFile;
-    anchor.download = 'Gitesh_cv26Jan.pdf';
+    anchor.download = 'Gitesh_cv_24March_SE.pdf';
     document.body.appendChild(anchor);
     anchor.click();
     document.body.removeChild(anchor);
@@ -29,71 +29,84 @@ const Skills = () => {
   const skills = [
   {
     id: 1,
-    name: "React",
-    category: "Frontend",
-    icon: "Code2",
-    proficiency: 95,
+    name: "Java",
+    category: "Backend",
+    icon: "Coffee",
+    proficiency: 92,
     level: "Expert",
     experience: "4+ years",
     startYear: 2020,
-    growth: "+15% YoY",
-    projects: ["E-commerce Platform", "Admin Dashboard", "Social Media App"],
-    description: "Advanced React development with hooks, context, and performance optimization"
+    growth: "+10% YoY",
+    projects: ["Survey Platform", "Pareekshn Admin Panel", "Backend Services"],
+    description: "Core Java, OOPs, collections, streams, multithreading, and design patterns"
   },
   {
     id: 2,
     name: "JavaScript",
     category: "Frontend",
     icon: "FileCode",
-    proficiency: 92,
+    proficiency: 88,
     level: "Expert",
-    experience: "5+ years",
-    startYear: 2019,
+    experience: "4+ years",
+    startYear: 2020,
     growth: "+12% YoY",
     projects: ["Web Applications", "API Integration", "Interactive UIs"],
     description: "Modern ES6+ JavaScript with async/await, promises, and functional programming"
   },
   {
     id: 3,
-    name: "TypeScript",
-    category: "Frontend",
-    icon: "Code",
-    proficiency: 88,
+    name: "Python",
+    category: "Backend",
+    icon: "Terminal",
+    proficiency: 78,
     level: "Advanced",
-    experience: "3+ years",
-    startYear: 2021,
+    experience: "2+ years",
+    startYear: 2022,
     growth: "+20% YoY",
-    projects: ["Enterprise Apps", "Type-safe APIs", "Component Libraries"],
-    description: "Strong typing, interfaces, generics, and advanced TypeScript patterns"
+    projects: ["RAG Chatbot", "Data Processing", "FastAPI Services"],
+    description: "FastAPI, LangChain, data pipelines, and AI/ML integrations"
   },
   {
     id: 4,
-    name: "Spring Boot",
-    category: "Backend",
-    icon: "Server",
+    name: "React.js",
+    category: "Frontend",
+    icon: "Code2",
     proficiency: 90,
     level: "Expert",
     experience: "4+ years",
     startYear: 2020,
-    growth: "+18% YoY",
-    projects: ["REST APIs", "Microservices", "Enterprise Systems"],
-    description: "RESTful API development, security, and microservices architecture"
+    growth: "+15% YoY",
+    projects: ["Survey Platform", "Pareekshn Admin Panel", "Portfolio"],
+    description: "Hooks, context, state management, and clean API integration"
   },
   {
     id: 5,
-    name: "Java",
-    category: "Backend",
-    icon: "Coffee",
-    proficiency: 93,
-    level: "Expert",
-    experience: "5+ years",
-    startYear: 2019,
-    growth: "+10% YoY",
-    projects: ["Backend Services", "Data Processing", "System Integration"],
-    description: "Core Java, collections, streams, multithreading, and design patterns"
+    name: "Tailwind CSS",
+    category: "Frontend",
+    icon: "Palette",
+    proficiency: 85,
+    level: "Advanced",
+    experience: "2+ years",
+    startYear: 2022,
+    growth: "+19% YoY",
+    projects: ["Portfolio", "Admin Dashboards", "Responsive UIs"],
+    description: "Utility-first CSS, responsive design, and custom configuration"
   },
   {
     id: 6,
+    name: "Spring Boot",
+    category: "Backend",
+    icon: "Server",
+    proficiency: 92,
+    level: "Expert",
+    experience: "4+ years",
+    startYear: 2020,
+    growth: "+18% YoY",
+    projects: ["Survey Platform", "Pareekshn Admin Panel", "REST APIs"],
+    description: "RESTful API development, security, microservices, and performance optimization"
+  },
+  {
+    id: 7,
     name: "Node.js",
     category: "Backend",
     icon: "Hexagon",
@@ -102,88 +115,139 @@ const Skills = () => {
     experience: "3+ years",
     startYear: 2021,
     growth: "+22% YoY",
-    projects: ["API Servers", "Real-time Apps", "Serverless Functions"],
+    projects: ["Pareekshn Platform", "API Servers", "Real-time Services"],
     description: "Express.js, middleware, authentication, and scalable server architecture"
   },
   {
-    id: 7,
-    name: "PostgreSQL",
-    category: "Database",
-    icon: "Database",
-    proficiency: 87,
-    level: "Advanced",
-    experience: "4+ years",
-    startYear: 2020,
-    growth: "+14% YoY",
-    projects: ["Data Modeling", "Query Optimization", "Database Design"],
-    description: "Complex queries, indexing, transactions, and database optimization"
-  },
-  {
     id: 8,
-    name: "MongoDB",
-    category: "Database",
-    icon: "Database",
-    proficiency: 82,
+    name: "FastAPI",
+    category: "Backend",
+    icon: "Zap",
+    proficiency: 78,
     level: "Advanced",
-    experience: "3+ years",
-    startYear: 2021,
-    growth: "+16% YoY",
-    projects: ["NoSQL Solutions", "Document Storage", "Aggregation Pipelines"],
-    description: "Document modeling, aggregation framework, and performance tuning"
+    experience: "1+ years",
+    startYear: 2024,
+    growth: "+30% YoY",
+    projects: ["RAG Chatbot", "Legal Q&A API"],
+    description: "Async Python APIs, dependency injection, and OpenAPI documentation"
   },
   {
     id: 9,
-    name: "AWS",
-    category: "Cloud & DevOps",
-    icon: "Cloud",
-    proficiency: 80,
-    level: "Intermediate",
-    experience: "2+ years",
-    startYear: 2022,
-    growth: "+25% YoY",
-    projects: ["Cloud Deployment", "S3 Storage", "Lambda Functions"],
-    description: "EC2, S3, Lambda, RDS, and cloud infrastructure management"
+    name: "MySQL",
+    category: "Database",
+    icon: "Database",
+    proficiency: 90,
+    level: "Expert",
+    experience: "4+ years",
+    startYear: 2020,
+    growth: "+14% YoY",
+    projects: ["Survey Platform", "Pareekshn", "Query Optimization"],
+    description: "Schema design, query optimization, indexing, and high-load performance tuning"
   },
   {
     id: 10,
+    name: "PostgreSQL",
+    category: "Database",
+    icon: "Database",
+    proficiency: 85,
+    level: "Advanced",
+    experience: "3+ years",
+    startYear: 2021,
+    growth: "+14% YoY",
+    projects: ["Pareekshn Admin Panel", "pgvector RAG"],
+    description: "Complex queries, indexing, pgvector for semantic search, and optimization"
+  },
+  {
+    id: 11,
+    name: "MongoDB",
+    category: "Database",
+    icon: "Layers",
+    proficiency: 78,
+    level: "Advanced",
+    experience: "2+ years",
+    startYear: 2022,
+    growth: "+16% YoY",
+    projects: ["NoSQL Solutions", "Document Storage"],
+    description: "Document modeling, aggregation framework, and performance tuning"
+  },
+  {
+    id: 12,
+    name: "pgvector",
+    category: "Database",
+    icon: "Brain",
+    proficiency: 72,
+    level: "Intermediate",
+    experience: "1+ years",
+    startYear: 2024,
+    growth: "+40% YoY",
+    projects: ["RAG Chatbot", "Semantic Search"],
+    description: "Vector similarity search in PostgreSQL for AI/RAG applications"
+  },
+  {
+    id: 13,
+    name: "AWS (EC2/RDS/S3)",
+    category: "Cloud & DevOps",
+    icon: "Cloud",
+    proficiency: 80,
+    level: "Advanced",
+    experience: "2+ years",
+    startYear: 2022,
+    growth: "+25% YoY",
+    projects: ["Survey Platform", "BIADA Deployment", "Cloud Infrastructure"],
+    description: "EC2, RDS, S3 for production deployments with high availability"
+  },
+  {
+    id: 14,
     name: "Docker",
     category: "Cloud & DevOps",
     icon: "Container",
     proficiency: 78,
-    level: "Intermediate",
+    level: "Advanced",
     experience: "2+ years",
     startYear: 2022,
     growth: "+28% YoY",
-    projects: ["Containerization", "Multi-stage Builds", "Docker Compose"],
-    description: "Container orchestration, image optimization, and deployment strategies"
+    projects: ["RAG Chatbot", "Containerization", "Docker Compose"],
+    description: "Docker Compose, multi-service orchestration, and image optimization"
   },
   {
-    id: 11,
-    name: "Git",
+    id: 15,
+    name: "NGINX",
+    category: "Cloud & DevOps",
+    icon: "Globe",
+    proficiency: 74,
+    level: "Intermediate",
+    experience: "2+ years",
+    startYear: 2022,
+    growth: "+20% YoY",
+    projects: ["RAG Chatbot", "Reverse Proxy", "Load Balancing"],
+    description: "Reverse proxy, load balancing, and production server configuration"
+  },
+  {
+    id: 16,
+    name: "Git / CI/CD",
     category: "Tools & Others",
     icon: "GitBranch",
-    proficiency: 94,
+    proficiency: 92,
     level: "Expert",
-    experience: "5+ years",
-    startYear: 2019,
+    experience: "4+ years",
+    startYear: 2020,
     growth: "+8% YoY",
-    projects: ["Version Control", "Collaboration", "Code Review"],
-    description: "Advanced Git workflows, branching strategies, and team collaboration"
+    projects: ["All Projects", "Team Collaboration", "Automated Pipelines"],
+    description: "Advanced Git workflows, branching strategies, and CI/CD pipelines"
   },
   {
-    id: 12,
-    name: "Tailwind CSS",
-    category: "Frontend",
-    icon: "Palette",
-    proficiency: 91,
+    id: 17,
+    name: "DSA / OOPs",
+    category: "Tools & Others",
+    icon: "Code",
+    proficiency: 90,
     level: "Expert",
-    experience: "3+ years",
-    startYear: 2021,
-    growth: "+19% YoY",
-    projects: ["Responsive Design", "Component Styling", "Custom Themes"],
-    description: "Utility-first CSS, responsive design, and custom configuration"
+    experience: "4+ years",
+    startYear: 2020,
+    growth: "+10% YoY",
+    projects: ["350+ LeetCode", "300+ GFG", "System Design"],
+    description: "Data structures, algorithms, OOP principles, and problem solving (350+ LeetCode)"
   }];
-
 
   const timelineData = [
   {

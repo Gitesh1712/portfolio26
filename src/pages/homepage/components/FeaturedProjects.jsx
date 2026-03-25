@@ -3,54 +3,24 @@ import { useNavigate } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Image from '../../../components/AppImage';
 import Button from '../../../components/ui/Button';
+import { projects as allProjects } from '../../../data/projects';
 
 const FeaturedProjects = () => {
   const navigate = useNavigate();
 
-  const projects = [
-  {
-    id: 1,
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with real-time inventory management, payment gateway integration, and advanced analytics dashboard. Built with React, Spring Boot, and PostgreSQL.',
-    image: "https://img.rocket.new/generatedImages/rocket_gen_img_1eb7c1cb3-1764655134961.png",
-    imageAlt: 'Modern e-commerce website interface showing product grid layout with shopping cart and checkout features on desktop screen',
-    tags: ['React', 'Spring Boot', 'PostgreSQL', 'AWS'],
-    metrics: [
-    { label: 'Performance', value: '98/100', icon: 'Zap' },
-    { label: 'Users', value: '10K+', icon: 'Users' },
-    { label: 'Uptime', value: '99.9%', icon: 'Activity' }],
-
-    link: '/projects'
-  },
-  {
-    id: 2,
-    title: 'MediaCMS Platform',
-    description: 'Full-stack CMS for a media company with a public website and admin panel for managing posts, layouts, themes, and users.',
-    image: "https://img.rocket.new/generatedImages/rocket_gen_img_11b6b117c-1767258777980.png",
-    imageAlt: 'Admin panel dashboard showing post previews, layout tools, and user management',
-    tags: ['React', 'Node.js', 'MongoDB', 'D3.js'],
-    metrics: [
-    { label: 'Data Points', value: '5M+', icon: 'Database' },
-    { label: 'Response', value: '<500ms', icon: 'Timer' },
-    { label: 'Accuracy', value: '99.5%', icon: 'Target' }],
-
-    link: '/projects'
-  },
-  {
-    id: 3,
-    title: 'Social Media Management Tool',
-    description: 'Comprehensive social media management platform with scheduling, analytics, and engagement tracking across multiple platforms. Streamlines content creation and distribution.',
-    image: "https://img.rocket.new/generatedImages/rocket_gen_img_1ac6f7ff3-1765294603648.png",
-    imageAlt: 'Social media management interface showing multiple platform feeds, scheduling calendar, and engagement metrics on laptop screen',
-    tags: ['React', 'Express', 'Redis', 'OAuth'],
-    metrics: [
-    { label: 'Platforms', value: '8+', icon: 'Share2' },
-    { label: 'Posts/Day', value: '1000+', icon: 'Send' },
-    { label: 'Engagement', value: '+45%', icon: 'TrendingUp' }],
-
-    link: '/projects'
-  }];
-
+  // Derive featured cards from the shared data source — edit src/data/projects.js
+  const projects = allProjects
+    .filter((p) => p.featured)
+    .map((p) => ({
+      id: p.id,
+      title: p.title,
+      description: p.description,
+      image: p.image,
+      imageAlt: p.imageAlt,
+      tags: p.tags,
+      metrics: p.featuredMetrics,
+      link: '/projects',
+    }));
 
   return (
     <section className="py-16 md:py-20 lg:py-24 bg-card px-4 md:px-6 lg:px-8">

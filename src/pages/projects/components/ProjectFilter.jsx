@@ -13,15 +13,15 @@ const ProjectFilter = ({
 }) => {
   const categories = [
     { value: 'all', label: 'All Projects', icon: 'Grid3x3' },
-    { value: 'web', label: 'Web Apps', icon: 'Globe' },
-    { value: 'mobile', label: 'Mobile', icon: 'Smartphone' },
     { value: 'fullstack', label: 'Full Stack', icon: 'Layers' },
+    { value: 'ai', label: 'AI / RAG', icon: 'Brain' },
+    { value: 'web', label: 'Web Apps', icon: 'Globe' },
     { value: 'api', label: 'API/Backend', icon: 'Server' }
   ];
 
   const technologies = [
-    'React', 'Spring Boot', 'Node.js', 'MongoDB', 'PostgreSQL', 
-    'TypeScript', 'Java', 'Python', 'Docker', 'AWS'
+    'React', 'Spring Boot', 'Node.js', 'MySQL', 'PostgreSQL',
+    'Python', 'FastAPI', 'Docker', 'AWS', 'pgvector'
   ];
 
   const complexityLevels = [

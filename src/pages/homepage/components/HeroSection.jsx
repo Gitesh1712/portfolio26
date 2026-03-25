@@ -68,7 +68,7 @@ const HeroSection = () => {
             </h2>
 
             <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
-              Building digital solutions that matter through clean code, scalable architecture, and user-centric design. Specializing in full-stack development with React, Spring Boot, and modern web technologies.
+              Building digital solutions that matter through clean code, scalable architecture, and user-centric design. Specializing in full-stack development with React, Spring Boot, FastAPI, and cloud-native infrastructure on AWS.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -95,7 +95,7 @@ const HeroSection = () => {
             </div>
 
             <div className="flex flex-wrap gap-3 justify-center lg:justify-start pt-4">
-              {['React', 'Spring Boot', 'Node.js', 'PostgreSQL','MySql', 'AWS']?.map((tech) => (
+              {['React', 'Spring Boot', 'Node.js', 'FastAPI', 'MySQL', 'PostgreSQL', 'AWS', 'Docker']?.map((tech) => (
                 <span
                   key={tech}
                   className="px-3 py-1.5 md:px-4 md:py-2 rounded-lg bg-card border border-border text-xs md:text-sm text-foreground font-medium hover:border-primary/50 transition-colors duration-300"
