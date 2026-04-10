@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Icon from '../AppIcon';
+import { useTheme } from '../../context/ThemeContext';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const { isDarkMode, toggleTheme } = useTheme();
 
   const navigationItems = [
     { path: '/homepage', label: 'Home' },
@@ -69,6 +71,17 @@ const Header = () => {
                   {item?.label}
                 </button>
               ))}
+              <button
+                onClick={toggleTheme}
+                className="header-nav-link"
+                aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+                title={isDarkMode ? 'Switch to purple and white mode' : 'Switch to night mode'}
+              >
+                <span className="inline-flex items-center gap-2">
+                  <Icon name={isDarkMode ? 'Sun' : 'Moon'} size={16} />
+                  {isDarkMode ? 'Light' : 'Night'}
+                </span>
+              </button>
             </nav>
 
             <button
@@ -89,6 +102,16 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="header-mobile-menu animate-fade-in">
           <nav className="header-mobile-nav">
+            <button
+              onClick={toggleTheme}
+              className="header-mobile-link"
+              aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              <span className="inline-flex items-center gap-2">
+                <Icon name={isDarkMode ? 'Sun' : 'Moon'} size={18} />
+                {isDarkMode ? 'Switch to Purple & White' : 'Switch to Night Mode'}
+              </span>
+            </button>
             {navigationItems?.map((item) => (
               <button
                 key={item?.path}

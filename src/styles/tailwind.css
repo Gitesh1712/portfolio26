@@ -10,36 +10,36 @@
 @layer base {
   :root {
     /* Primary Colors */
-    --color-primary: #8b5cf6; /* purple-500 */
+    --color-primary: #6f4ce6; /* regal-violet */
     --color-primary-foreground: #ffffff; /* white */
     
     /* Secondary Colors */
-    --color-secondary: #a78bfa; /* purple-400 */
+    --color-secondary: #9375ffe7; /* soft-iris */
     --color-secondary-foreground: #ffffff; /* white */
     
     /* Accent Colors */
-    --color-accent: #c4b5fd; /* purple-300 */
-    --color-accent-foreground: #1f2937; /* gray-800 */
+    --color-accent: #ece6ff; /* mist-lilac */
+    --color-accent-foreground: #1f2430; /* graphite */
     
     /* Background Colors */
-    --color-background: #0f0f0f; /* near-black */
-    --color-foreground: #f8fafc; /* slate-50 */
+    --color-background: #f6f7fb; /* porcelain */
+    --color-foreground: #1f2430; /* graphite */
     
     /* Surface Colors */
-    --color-card: #1a1a1a; /* dark-gray */
-    --color-card-foreground: #f8fafc; /* slate-50 */
+    --color-card: #ffffff; /* white */
+    --color-card-foreground: #1f2430; /* graphite */
     
-    --color-popover: #1a1a1a; /* dark-gray */
-    --color-popover-foreground: #f8fafc; /* slate-50 */
+    --color-popover: #ffffff; /* white */
+    --color-popover-foreground: #1f2430; /* graphite */
     
     /* Muted Colors */
-    --color-muted: #2d2d2d; /* medium-dark-gray */
-    --color-muted-foreground: #94a3b8; /* slate-400 */
+    --color-muted: #eef1f7; /* cloud-gray */
+    --color-muted-foreground: #667085; /* slate-gray */
     
     /* Border & Input */
-    --color-border: rgba(139, 92, 246, 0.2); /* purple-500 with opacity */
-    --color-input: rgba(139, 92, 246, 0.2); /* purple-500 with opacity */
-    --color-ring: #8b5cf6; /* purple-500 */
+    --color-border: rgba(31, 36, 48, 0.12); /* graphite with opacity */
+    --color-input: rgba(111, 76, 230, 0.25); /* violet with opacity */
+    --color-ring: #6f4ce6; /* regal-violet */
     
     /* Status Colors */
     --color-success: #10b981; /* emerald-500 */
@@ -63,20 +63,26 @@
   }
 
   .dark {
-    --color-background: #0a0a0a; /* deeper-black */
-    --color-foreground: #f8fafc; /* slate-50 */
+    --color-primary: #9d87ff; /* bright-violet for contrast */
+    --color-secondary: #b5a4ff; /* soft-lavender */
+    --color-accent: #2a2540; /* deep-lilac */
+    --color-accent-foreground: #f3f5fb; /* off-white */
+
+    --color-background: #0f121a; /* midnight-slate */
+    --color-foreground: #e8ecf5; /* cool-off-white */
     
-    --color-card: #141414; /* darker-gray */
-    --color-card-foreground: #f8fafc; /* slate-50 */
+    --color-card: #161b26; /* elevated-midnight */
+    --color-card-foreground: #e8ecf5; /* cool-off-white */
     
-    --color-popover: #141414; /* darker-gray */
-    --color-popover-foreground: #f8fafc; /* slate-50 */
+    --color-popover: #161b26; /* elevated-midnight */
+    --color-popover-foreground: #e8ecf5; /* cool-off-white */
     
-    --color-muted: #262626; /* darker-medium-gray */
-    --color-muted-foreground: #94a3b8; /* slate-400 */
+    --color-muted: #232b3a; /* muted-slate */
+    --color-muted-foreground: #aab4c8; /* misty-gray */
     
-    --color-border: rgba(139, 92, 246, 0.3); /* purple-500 with higher opacity */
-    --color-input: rgba(139, 92, 246, 0.3); /* purple-500 with higher opacity */
+    --color-border: rgba(232, 236, 245, 0.16); /* off-white border */
+    --color-input: rgba(157, 135, 255, 0.38); /* violet input */
+    --color-ring: #9d87ff; /* bright-violet */
   }
 
   * {
@@ -87,6 +93,11 @@
     @apply bg-background text-foreground;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
+    background-image:
+      radial-gradient(circle at 15% -10%, color-mix(in srgb, var(--color-primary) 12%, transparent) 0%, transparent 38%),
+      radial-gradient(circle at 85% 0%, color-mix(in srgb, var(--color-secondary) 10%, transparent) 0%, transparent 35%);
+    background-attachment: fixed;
+    transition: background-color 220ms ease, color 220ms ease;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -102,7 +113,9 @@
 @layer components {
   /* Header Styles */
   .header {
-    @apply fixed top-0 left-0 right-0 z-50 bg-card shadow-md;
+    @apply fixed top-0 left-0 right-0 z-50 shadow-sm;
+    background: color-mix(in srgb, var(--color-card) 88%, transparent);
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--color-border);
   }
 
@@ -139,7 +152,8 @@
   }
 
   .header-nav-link:hover {
-    @apply text-foreground bg-muted;
+    @apply text-foreground;
+    background: color-mix(in srgb, var(--color-muted) 85%, transparent);
   }
 .header-nav-link.active  {
     @apply text-primary;
@@ -151,6 +165,7 @@
 
   .header-mobile-menu {
     @apply lg:hidden fixed inset-0 z-40 bg-background;
+    background-image: linear-gradient(180deg, color-mix(in srgb, var(--color-background) 95%, transparent), var(--color-background));
     top: 64px;
   }
 
@@ -164,7 +179,8 @@
   }
 
   .header-mobile-link:hover {
-    @apply text-foreground bg-muted;
+    @apply text-foreground;
+    background: color-mix(in srgb, var(--color-muted) 85%, transparent);
   }
 .header-mobile-link.active  {
     @apply text-primary;
@@ -181,13 +197,15 @@
   }
 ::-webkit-scrollbar-thumb  {
     @apply rounded-full;
+    background-color: color-mix(in srgb, var(--color-primary) 40%, transparent);
   }
 ::-webkit-scrollbar-thumb:hover  {
-    
+    background-color: color-mix(in srgb, var(--color-primary) 60%, transparent);
   }
 
   /* Selection */
 ::selection  {
+  background: color-mix(in srgb, var(--color-primary) 30%, transparent);
     @apply text-foreground;
   }
 
@@ -235,11 +253,11 @@
 
   /* Shadow Utilities */
   .shadow-purple {
-    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1);
+    box-shadow: 0 10px 28px rgba(29, 33, 45, 0.08), 0 2px 8px rgba(111, 76, 230, 0.08);
   }
 
   .shadow-purple-lg {
-    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.15);
+    box-shadow: 0 18px 40px rgba(29, 33, 45, 0.12), 0 6px 16px rgba(111, 76, 230, 0.14);
   }
 
   /* Border Utilities */
