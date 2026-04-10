@@ -8,21 +8,26 @@ import CertificationBadge from './components/CertificationBadge';
 import SkillRelationshipMap from './components/SkillRelationshipMap';
 import LearningPathCard from './components/LearningPathCard';
 import SkillComparisonMode from './components/SkillComparisonMode';
-import resumeFile from '../../assets/docs/Gitesh_cv_24March_SE.pdf';
 import { certifications, technologyTimeline } from '../../data/experience';
+
+const RESUME_FILE = 'https://raw.githubusercontent.com/Gitesh1712/resume/main/Gitesh_cv.pdf';
 
 const Skills = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSkill, setSelectedSkill] = useState(null);
   const [viewMode, setViewMode] = useState('grid');
 
-  const handleDownloadResume = () => {
+  const handleDownloadResume = async () => {
+    const response = await fetch(RESUME_FILE);
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
     const anchor = document.createElement('a');
-    anchor.href = resumeFile;
-    anchor.download = 'Gitesh_cv_24March_SE.pdf';
+    anchor.href = url;
+    anchor.download = 'Gitesh_cv.pdf';
     document.body.appendChild(anchor);
     anchor.click();
     document.body.removeChild(anchor);
+    URL.revokeObjectURL(url);
   };
 
   const categories = ['All', 'Frontend', 'Backend', 'Database', 'Cloud & DevOps', 'Tools & Others'];

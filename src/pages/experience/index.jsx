@@ -7,7 +7,6 @@ import TimelineItem from "./components/TimelineItem";
 import StatsCard from "./components/StatsCard";
 import CertificationCard from "./components/CertificationCard";
 import SkillEvolutionChart from "./components/SkillEvolutionChart";
-import resumeFile from "../../assets/docs/Gitesh_cv_24March_SE.pdf";
 import {
   experiences,
   careerStats,
@@ -15,16 +14,22 @@ import {
   skillEvolution,
 } from "../../data/experience";
 
+const RESUME_FILE = 'https://raw.githubusercontent.com/Gitesh1712/resume/main/Gitesh_cv.pdf';
+
 const Experience = () => {
   const [activeFilter, setActiveFilter] = useState("all");
 
-  const handleDownloadResume = () => {
+  const handleDownloadResume = async () => {
+    const response = await fetch(RESUME_FILE);
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
     const anchor = document.createElement("a");
-    anchor.href = resumeFile;
-    anchor.download = "Gitesh_cv_24March_SE.pdf";
+    anchor.href = url;
+    anchor.download = "Gitesh_cv.pdf";
     document.body.appendChild(anchor);
     anchor.click();
     document.body.removeChild(anchor);
+    URL.revokeObjectURL(url);
   };
 
   const filteredExperiences =

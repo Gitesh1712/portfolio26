@@ -2,18 +2,23 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
-import resumeFile from '../../../assets/docs/Gitesh_cv_24March_SE.pdf';
+
+const RESUME_FILE = 'https://raw.githubusercontent.com/Gitesh1712/resume/main/Gitesh_cv.pdf';
 
 const CTASection = () => {
   const navigate = useNavigate();
 
-  const handleDownloadResume = () => {
+  const handleDownloadResume = async () => {
+    const response = await fetch(RESUME_FILE);
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
     const anchor = document.createElement('a');
-    anchor.href = resumeFile;
-    anchor.download = 'Gitesh_cv_24March_SE.pdf';
+    anchor.href = url;
+    anchor.download = 'Gitesh_cv.pdf';
     document.body.appendChild(anchor);
     anchor.click();
     document.body.removeChild(anchor);
+    URL.revokeObjectURL(url);
   };
 
   const contactMethods = [
