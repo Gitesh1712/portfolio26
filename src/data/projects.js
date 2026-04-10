@@ -1,3 +1,7 @@
+import CMSAdminImg from '../assets/images/CMSAdmin.jpg';
+import AssessmentImg from '../assets/images/Assessment.png';
+import RAGChatbotImg from '../assets/images/RAGChatbot.png';
+
 /**
  * Single source of truth for all project data.
  *
@@ -13,7 +17,7 @@ export const projects = [
     id: 1,
     title: "Survey Platform — BIADA",
     description:
-      "Production-grade government survey platform for Bihar Industrial Area Development Authority (BIADA), enabling field data collection across distributed surveyor teams and replacing a fully manual process with a digitized, auditable workflow.",
+      "State Level government survey platform for Bihar Industrial Area Development Authority (BIADA), enabling field data collection across distributed surveyor teams and replacing a fully manual process with a digitized, auditable workflow.",
     fullDescription:
       "Delivered a production-grade government survey platform for BIADA, enabling secure field data collection across distributed surveyor teams. The platform replaced a fully manual process with a digitized, auditable workflow — featuring AES-256 encryption, geo-fencing, GPS tracking, IP logging, and RBAC to secure sensitive government survey data end-to-end. Hosted on AWS (EC2, RDS, S3) with JWT authentication and query optimization to handle high-concurrency field submissions during peak survey drives.",
     category: "fullstack",
@@ -94,7 +98,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Pareekshn — Assessment Admin Panel",
+    title: "Online Assessment Admin Panel",
     description:
       "End-to-end assessment administration platform consolidating exam creation, candidate allocation, scheduling, real-time scoring, and result publishing into a single unified system.",
     fullDescription:
@@ -102,9 +106,8 @@ export const projects = [
     category: "fullstack",
     complexity: "Advanced",
     status: "Live",
-    featured: true,
-    image:
-      "https://img.rocket.new/generatedImages/rocket_gen_img_11b6b117c-1767258777980.png",
+    featured: false,
+    image:AssessmentImg,
     imageAlt:
       "Assessment admin panel showing exam management, candidate allocation, and real-time scoring dashboard",
     tags: ["Spring Boot", "React", "PostgreSQL", "Node.js"],
@@ -186,8 +189,7 @@ export const projects = [
     complexity: "Advanced",
     status: "Live",
     featured: true,
-    image:
-      "https://img.rocket.new/generatedImages/rocket_gen_img_1ac6f7ff3-1765294603648.png",
+    image:RAGChatbotImg,
     imageAlt:
       "RAG chatbot interface showing legal document Q&A with citations and source references",
     tags: ["FastAPI", "pgvector", "Python", "Docker"],
@@ -256,6 +258,85 @@ export const projects = [
       { value: "4", metric: "Pluggable LLM Providers" },
       { value: "1024d", metric: "Embedding Dimensions" },
       { value: "<500ms", metric: "Average Query Response" },
+    ],
+  },
+  {
+    id: 4,
+    title: "Media CMS — Admin Panel & Public Portal",
+    description:
+      "Full-stack Content Management System for a media company, featuring a private admin dashboard for managing and analysing posts, and a public-facing portal delivering news, articles, and shorts to end audiences.",
+    fullDescription:
+      "Built a full-stack CMS for a media entity comprising two tightly integrated surfaces: a private admin panel and a public-facing web portal. The admin dashboard gives editors and administrators full control over content — creating, editing, and publishing posts while surfacing engagement analytics to guide editorial decisions. The public portal dynamically renders the published content across categories including news, articles, and short-form media, providing a fast and responsive reading experience. The entire system is powered by a Node.js/Express REST API backed by MongoDB, with React on both surfaces for a consistent UI development experience.",
+    category: "fullstack",
+    complexity: "Intermediate",
+    status: "Completed",
+    featured: true,
+    image: CMSAdminImg,
+    imageAlt:
+      "Media CMS admin dashboard showing content management interface with post analytics and publishing controls",
+    tags: ["React", "Node.js", "MongoDB", "Express"],
+    featuredMetrics: [
+      { label: "Surfaces", value: "2", icon: "Layout" },
+      { label: "Content Types", value: "4+", icon: "FileText" },
+      { label: "Stack", value: "MERN", icon: "Layers" },
+    ],
+    technologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "REST APIs",
+      "JWT",
+      "Mongoose",
+    ],
+    liveUrl: "",
+    githubUrl: "https://github.com/Gitesh1712",
+    metrics: {
+      users: "Internal",
+      performance: "93/100",
+      rating: "4.6/5",
+    },
+    architecture:
+      "React frontend split into two apps — a protected admin panel and a public portal. Node.js/Express REST API handles all content operations and analytics aggregation. MongoDB with Mongoose stores posts, categories, authors, and engagement data. JWT-based authentication guards the admin surface.",
+    features: [
+      "Admin dashboard for creating, editing, and publishing content",
+      "Post analytics and engagement metrics for editors",
+      "Public-facing portal with news, articles, and shorts",
+      "Category and tag-based content organisation",
+      "JWT-authenticated admin access control",
+      "Dynamic content rendering across content types",
+      "RESTful API powering both admin and public surfaces",
+      "Responsive design for mobile and desktop audiences",
+    ],
+    codeMetrics: {
+      coverage: "80%",
+      maintainability: "A",
+      security: "B+",
+      performance: "91/100",
+    },
+    challenges: [
+      {
+        problem: "Dual-Surface Architecture",
+        description:
+          "Serving a protected admin panel and an open public portal from a single backend required clear separation of concerns and auth boundaries.",
+        solution:
+          "Designed distinct route namespaces and JWT middleware guards so admin endpoints are fully isolated from public content delivery routes.",
+      },
+      {
+        problem: "Content Type Flexibility",
+        description:
+          "The media company needed to publish diverse content — news, long-form articles, and short-form media — without separate systems.",
+        solution:
+          "Modelled a flexible MongoDB schema with a shared base post structure and type-specific fields, enabling all content types through one unified API.",
+      },
+    ],
+    impact:
+      "Replaced a fragmented manual publishing workflow with a unified CMS, giving the media team full editorial control while delivering a polished public reading experience.",
+    results: [
+      { value: "2", metric: "Integrated Surfaces (Admin + Public)" },
+      { value: "4+", metric: "Content Types Supported" },
+      { value: "100%", metric: "Manual Workflow Eliminated" },
+      { value: "MERN", metric: "Full-Stack Architecture" },
     ],
   },
 ];

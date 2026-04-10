@@ -2,44 +2,12 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Icon from '../../../components/AppIcon';
 import Button from '../../../components/ui/Button';
+import { experiences } from '../../../data/experience';
 
 const ExperienceTimeline = () => {
   const navigate = useNavigate();
 
-  const experiences = [
-    {
-      id: 1,
-      role: 'Senior Software Engineer',
-      company: 'Pareekshn Online Assessments',
-      period: 'Jun 2024 - Present',
-      location: 'Noida',
-      description: 'Designing and delivering scalable systems using Spring Boot and Node.js, building secure REST APIs, optimizing MySQL queries, and handling concurrency for high-load workflows. Developing React.js interfaces with clean state management and seamless API integration.',
-      achievements: [
-        'Built real-time scoring engine supporting concurrent multi-role assessments',
-        'Delivered production-grade government survey platform for BIADA',
-        'Automated PDF/Excel result generation cutting multi-hour manual effort per cycle'
-      ],
-      technologies: ['React', 'Spring Boot', 'Node.js', 'MySQL', 'AWS', 'Docker', 'JWT', 'REST APIs'],
-      icon: 'Briefcase',
-      color: 'var(--color-primary)'
-    },
-    // {
-    //   id: 3,
-    //   role: 'Software Developer',
-    //   company: 'StartUp Ventures',
-    //   period: '2019 - 2021',
-    //   location: 'On-site',
-    //   description: 'Contributed to product development from concept to launch, collaborated with cross-functional teams, and delivered features on tight deadlines.',
-    //   achievements: [
-    //     'Launched MVP in 3 months',
-    //     'Integrated payment gateway and analytics',
-    //     'Achieved 99.9% uptime in production'
-    //   ],
-    //   technologies: ['JavaScript', 'Express', 'MySQL', 'Git'],
-    //   icon: 'Rocket',
-    //   color: 'var(--color-accent)'
-    // }
-  ];
+  // data sourced from src/data/experience.js
 
   return (
     <section className="py-16 md:py-20 lg:py-24 bg-background px-4 md:px-6 lg:px-8">
@@ -100,7 +68,7 @@ const ExperienceTimeline = () => {
                       </p>
 
                       <div className="space-y-2 md:space-y-3 mb-4 md:mb-6">
-                        {exp?.achievements?.map((achievement, idx) => (
+                        {exp?.highlights?.map((achievement, idx) => (
                           <div key={idx} className="flex items-start gap-2">
                             <Icon
                               name="CheckCircle2"
@@ -164,7 +132,7 @@ const ExperienceTimeline = () => {
                       </p>
 
                       <div className="space-y-2 md:space-y-3 mb-4 md:mb-6">
-                        {exp?.achievements?.map((achievement, idx) => (
+                        {exp?.highlights?.map((achievement, idx) => (
                           <div key={idx} className="flex items-start gap-2">
                             <Icon
                               name="CheckCircle2"

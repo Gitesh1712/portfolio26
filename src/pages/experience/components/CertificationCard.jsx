@@ -8,8 +8,8 @@ const CertificationCard = ({ certification }) => {
       <div className="flex items-start gap-3 mb-3 md:gap-4">
         <div className="w-12 h-12 rounded-lg overflow-hidden bg-muted flex-shrink-0 md:w-14 md:h-14 lg:w-16 lg:h-16">
           <Image
-            src={certification?.logo}
-            alt={certification?.logoAlt}
+            src={certification?.badge}
+            alt={certification?.badgeAlt}
             className="w-full h-full object-cover"
           />
         </div>
@@ -24,7 +24,7 @@ const CertificationCard = ({ certification }) => {
       </div>
       <div className="flex items-center gap-2 text-xs text-muted-foreground mb-2 md:text-sm">
         <Icon name="Calendar" size={12} className="md:w-3 md:h-3" />
-        <span>{certification?.date}</span>
+        <span>{certification?.issueDate}</span>
       </div>
       {certification?.credentialId && (
         <div className="flex items-center gap-2 text-xs text-muted-foreground md:text-sm">

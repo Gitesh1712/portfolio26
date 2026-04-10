@@ -9,6 +9,7 @@ import SkillRelationshipMap from './components/SkillRelationshipMap';
 import LearningPathCard from './components/LearningPathCard';
 import SkillComparisonMode from './components/SkillComparisonMode';
 import resumeFile from '../../assets/docs/Gitesh_cv_24March_SE.pdf';
+import { certifications, technologyTimeline } from '../../data/experience';
 
 const Skills = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -249,107 +250,7 @@ const Skills = () => {
     description: "Data structures, algorithms, OOP principles, and problem solving (350+ LeetCode)"
   }];
 
-  const timelineData = [
-  {
-    year: "2026",
-    milestone: "Advanced Architecture",
-    icon: "Rocket",
-    description: "Focusing on system design, microservices architecture, and cloud-native development with Kubernetes and advanced DevOps practices.",
-    technologies: ["Kubernetes", "GraphQL", "Rust", "WebAssembly"]
-  },
-  {
-    year: "2025",
-    milestone: "Full-Stack Mastery",
-    icon: "Award",
-    description: "Achieved expert-level proficiency in React, Spring Boot, and cloud technologies. Leading development of enterprise-scale applications.",
-    technologies: ["React 18", "Spring Boot 3", "AWS", "Docker"]
-  },
-  {
-    year: "2024",
-    milestone: "Cloud & DevOps",
-    icon: "Cloud",
-    description: "Expanded expertise into cloud platforms and DevOps practices. Implemented CI/CD pipelines and containerized applications.",
-    technologies: ["AWS", "Docker", "Jenkins", "Terraform"]
-  },
-  {
-    year: "2023",
-    milestone: "Backend Specialization",
-    icon: "Server",
-    description: "Deep dive into backend development with Spring Boot and microservices architecture. Built scalable REST APIs and database systems.",
-    technologies: ["Spring Boot", "PostgreSQL", "Redis", "Kafka"]
-  },
-  {
-    year: "2022",
-    milestone: "Modern Frontend",
-    icon: "Layout",
-    description: "Mastered modern frontend development with React, TypeScript, and state management. Created responsive and performant web applications.",
-    technologies: ["React", "TypeScript", "Redux", "Tailwind CSS"]
-  },
-  {
-    year: "2021",
-    milestone: "JavaScript Ecosystem",
-    icon: "Code2",
-    description: "Explored the JavaScript ecosystem including Node.js, npm packages, and modern build tools. Built full-stack applications.",
-    technologies: ["Node.js", "Express", "Webpack", "Babel"]
-  },
-  {
-    year: "2020",
-    milestone: "Web Development Foundation",
-    icon: "BookOpen",
-    description: "Started professional web development journey. Learned HTML, CSS, JavaScript fundamentals and basic React concepts.",
-    technologies: ["HTML5", "CSS3", "JavaScript", "React Basics"]
-  },
-  {
-    year: "2019",
-    milestone: "Programming Fundamentals",
-    icon: "Code",
-    description: "Began learning programming with Java. Studied data structures, algorithms, and object-oriented programming principles.",
-    technologies: ["Java", "Data Structures", "Algorithms", "OOP"]
-  }];
-
-
-  const certifications = [
-  {
-    id: 1,
-    name: "AWS Certified Solutions Architect - Associate",
-    issuer: "Amazon Web Services",
-    badge: "https://img.rocket.new/generatedImages/rocket_gen_img_166f1efe1-1764661435735.png",
-    badgeAlt: "AWS certification badge with orange and white cloud logo on blue background showing Solutions Architect Associate credential",
-    issueDate: "Jan 2024",
-    expiryDate: "Jan 2027",
-    verificationUrl: "https://aws.amazon.com/verification"
-  },
-  {
-    id: 2,
-    name: "Oracle Certified Professional: Java SE 11 Developer",
-    issuer: "Oracle",
-    badge: "https://img.rocket.new/generatedImages/rocket_gen_img_18cf36c4b-1765031720849.png",
-    badgeAlt: "Oracle Java certification badge with red Oracle logo and Java coffee cup icon on white background",
-    issueDate: "Mar 2023",
-    expiryDate: "Lifetime",
-    verificationUrl: "https://oracle.com/verification"
-  },
-  {
-    id: 3,
-    name: "Meta Front-End Developer Professional Certificate",
-    issuer: "Meta (Facebook)",
-    badge: "https://img.rocket.new/generatedImages/rocket_gen_img_129c5b7d4-1764661436023.png",
-    badgeAlt: "Meta certification badge with blue infinity symbol logo and Front-End Developer text on white background",
-    issueDate: "Jun 2022",
-    expiryDate: "Lifetime",
-    verificationUrl: "https://coursera.org/verification"
-  },
-  {
-    id: 4,
-    name: "Docker Certified Associate",
-    issuer: "Docker Inc.",
-    badge: "https://img.rocket.new/generatedImages/rocket_gen_img_10dadbd09-1767113199618.png",
-    badgeAlt: "Docker certification badge with blue whale logo carrying containers on ocean background",
-    issueDate: "Sep 2023",
-    expiryDate: "Sep 2025",
-    verificationUrl: "https://docker.com/verification"
-  }];
-
+  // timelineData and certifications are imported from src/data/experience.js
 
   const relationshipData = [
   {
@@ -659,7 +560,7 @@ const Skills = () => {
                 <p className="text-sm text-muted-foreground">Journey of skill acquisition and growth</p>
               </div>
             </div>
-            <TechnologyTimeline timelineData={timelineData} />
+            <TechnologyTimeline timelineData={technologyTimeline} />
           </div>
 
           {/* <div>

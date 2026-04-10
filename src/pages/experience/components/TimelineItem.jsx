@@ -46,7 +46,7 @@ const TimelineItem = ({ experience, isLast }) => {
             <div className="flex flex-col gap-2 md:items-end">
               <div className="flex items-center gap-2 text-xs text-muted-foreground md:text-sm lg:text-base">
                 <Icon name="Calendar" size={14} className="md:w-4 md:h-4 lg:w-5 lg:h-5" />
-                <span>{experience?.duration}</span>
+                <span>{experience?.period}</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-muted-foreground md:text-sm lg:text-base">
                 <Icon name="MapPin" size={14} className="md:w-4 md:h-4 lg:w-5 lg:h-5" />

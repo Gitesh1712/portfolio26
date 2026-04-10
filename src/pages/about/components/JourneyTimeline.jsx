@@ -1,78 +1,11 @@
 import React, { useState } from 'react';
 import Icon from '../../../components/AppIcon';
+import { journeyMilestones } from '../../../data/experience';
 
 const JourneyTimeline = () => {
   const [expandedId, setExpandedId] = useState(null);
 
-  const milestones = [
-    {
-      id: 1,
-      year: "2024",
-      title: "Senior Software Engineer",
-      company: "Pareekshn Online Assessments",
-      type: "career",
-      icon: "Briefcase",
-      color: "var(--color-primary)",
-      summary: "Designing scalable systems and delivering production-grade government and assessment platforms",
-      details: "Designing and delivering scalable systems using Spring Boot and Node.js, building secure REST APIs, optimizing MySQL queries, and handling concurrency for high-load workflows. Delivered the BIADA government survey platform and the Pareekshn assessment admin panel — both production systems with real-world impact.",
-      achievements: [
-        "Delivered production-grade government survey platform for BIADA",
-        "Engineered real-time scoring engine for concurrent multi-role assessments",
-        "Automated PDF/Excel result generation cutting multi-hour manual effort per cycle",
-        "Implemented AES-256 encryption, geo-fencing, and RBAC for government data security"
-      ]
-    },
-    {
-      id: 2,
-      year: "2024",
-      title: "RAG Chatbot Side Project",
-      company: "Self-Initiated",
-      type: "achievement",
-      icon: "Brain",
-      color: "var(--color-accent)",
-      summary: "Built a citation-enforced RAG pipeline for legal document Q&A",
-      details: "Designed a RAG pipeline for structured legal document Q&A using FastAPI + PostgreSQL + pgvector. Built structure-aware chunking with legal section detection, BAAI/bge-large-en embeddings, and a retrieval confidence gate to prevent hallucinations. Containerized with Docker Compose, supporting GPT-4, Gemini, Claude, and local Llama 3.",
-      achievements: [
-        "Retrieval confidence gate — LLM never called on low-similarity results",
-        "Structure-aware chunking preserving legal document hierarchy",
-        "Pluggable LLM providers: GPT-4, Gemini, Claude, Llama 3",
-        "Fully containerized with Docker Compose + NGINX"
-      ]
-    },
-    {
-      id: 3,
-      year: "2023",
-      title: "LeetCode Milestone",
-      company: "Problem Solving Journey",
-      type: "achievement",
-      icon: "Trophy",
-      color: "var(--color-primary)",
-      summary: "Crossed 350+ problems on LeetCode and 300+ on GeeksforGeeks",
-      details: "Dedicated consistent effort to mastering data structures, algorithms, and system-level problem solving. Achieved strong proficiency in array manipulation, trees, graphs, dynamic programming, and concurrency patterns — directly applicable to real-world backend development.",
-      achievements: [
-        "350+ problems solved on LeetCode",
-        "300+ solutions on GeeksforGeeks",
-        "Mastered 15+ algorithm and DSA patterns",
-        "Applied DSA knowledge to production query optimization"
-      ]
-    },
-    {
-      id: 4,
-      year: "2022",
-      title: "B.Tech — Computer Science & Engineering",
-      company: "IMS Engineering College, Ghaziabad",
-      type: "education",
-      icon: "BookOpen",
-      color: "var(--color-accent)",
-      summary: "Graduated in CSE with 7.3/10 GPA",
-      details: "Completed comprehensive coursework in software engineering, algorithms, databases, operating systems, and computer networks at IMS Engineering College, Ghaziabad (2018–2022). Built a strong foundation in CS fundamentals that underpins all professional engineering work.",
-      achievements: [
-        "Graduated with 7.3/10 GPA",
-        "Coursework: DSA, OOPs, DBMS, OS, Computer Networks",
-        "B.Tech in Computer Science & Engineering (2018–2022)"
-      ]
-    }
-  ];
+  const milestones = journeyMilestones;
 
   const toggleExpand = (id) => {
     setExpandedId(expandedId === id ? null : id);
