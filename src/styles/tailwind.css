@@ -57,6 +57,9 @@
     /* Additional Semantic Colors */
     --color-info: #3b82f6; /* blue-500 */
     --color-info-foreground: #ffffff; /* white */
+
+    /* Code Syntax Colors */
+    --color-code-keyword: #7c3aed; /* violet-600 */
     
     /* Spacing & Layout */
     --radius: 0.5rem;
@@ -83,6 +86,8 @@
     --color-border: rgba(232, 236, 245, 0.16); /* off-white border */
     --color-input: rgba(157, 135, 255, 0.38); /* violet input */
     --color-ring: #9d87ff; /* bright-violet */
+
+    --color-code-keyword: #c4b5fd; /* violet-300 */
   }
 
   * {
@@ -220,6 +225,10 @@
   .text-gradient {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  }
+
+  .text-code-keyword {
+    color: var(--color-code-keyword);
   }
 
   /* Animation Utilities */

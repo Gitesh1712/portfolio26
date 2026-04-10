@@ -119,9 +119,9 @@ const HeroSection = () => {
 
               <div className="space-y-3 md:space-y-4 font-mono text-xs md:text-sm lg:text-base">
                 <div className="text-muted-foreground">
-                  <span className="text-accent">const</span>{' '}
+                  <span className="text-code-keyword">const</span>{' '}
                   <span className="text-foreground">developer</span> ={' '}
-                  <span className="text-accent">new</span>{' '}
+                  <span className="text-code-keyword">new</span>{' '}
                   <span className="text-primary">FullStackEngineer</span>();
                 </div>
                 <div className="text-muted-foreground">
