@@ -36,6 +36,7 @@ const PortfolioAssistant = () => {
   const [messages, setMessages] = useState(() => [createWelcomeMessage()]);
   const [error, setError] = useState('');
   const [hasUnread, setHasUnread] = useState(false);
+  const [showAttentionCue, setShowAttentionCue] = useState(true);
 
   const messagesContainerRef = useRef(null);
 
@@ -51,6 +52,14 @@ const PortfolioAssistant = () => {
       setHasUnread(true);
     }
   }, [messages, isOpen]);
+
+  useEffect(() => {
+    const timeoutId = window.setTimeout(() => {
+      setShowAttentionCue(false);
+    }, 9000);
+
+    return () => window.clearTimeout(timeoutId);
+  }, []);
 
   const addMessage = (role, content) => {
     setMessages((prev) => [
@@ -120,6 +129,7 @@ const PortfolioAssistant = () => {
   const openAssistant = () => {
     setIsOpen(true);
     setHasUnread(false);
+    setShowAttentionCue(false);
   };
 
   const clearConversation = () => {
@@ -256,9 +266,17 @@ const PortfolioAssistant = () => {
       <button
         type="button"
         onClick={isOpen ? () => setIsOpen(false) : openAssistant}
-        className="group relative inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-purple text-white shadow-purple-xl transition duration-300 hover:scale-105"
+        className={`group relative inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-purple text-white shadow-purple-xl transition duration-300 hover:scale-105 ${
+          showAttentionCue && !isOpen ? 'animate-bounce' : ''
+        }`}
         aria-label={isOpen ? 'Minimize portfolio assistant' : 'Open portfolio assistant'}
       >
+        {showAttentionCue && !isOpen && (
+          <div className="pointer-events-none absolute bottom-[calc(100%+0.7rem)] right-0 z-10 w-64 rounded-xl border border-border bg-card/95 px-3 py-2 text-xs font-medium text-foreground shadow-purple-lg backdrop-blur-sm animate-fade-in">
+            <p>Hiring? Ask my AI assistant for a 30-second overview.</p>
+            <span className="absolute -bottom-1 right-5 h-2.5 w-2.5 rotate-45 border-b border-r border-border bg-card/95" />
+          </div>
+        )}
         <span className="absolute inset-0 rounded-2xl bg-white/20 opacity-0 transition group-hover:opacity-100" />
         <Icon name={isOpen ? 'Minus' : 'MessageCircle'} size={24} className="relative" />
         {hasUnread && !isOpen && (
