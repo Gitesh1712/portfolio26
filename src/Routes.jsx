@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes as RouterRoutes, Route } from "react-router-dom";
 import ScrollToTop from "components/ScrollToTop";
 import ErrorBoundary from "components/ErrorBoundary";
+import PortfolioAssistant from "components/PortfolioAssistant";
 import NotFound from "pages/NotFound";
 import Contact from './pages/contact';
 import Experience from './pages/experience';
@@ -26,6 +27,7 @@ const Routes = () => {
         <Route path="/homepage" element={<Homepage />} />
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
+      <PortfolioAssistant />
       </ErrorBoundary>
     </BrowserRouter>
   );
