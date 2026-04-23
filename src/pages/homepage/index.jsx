@@ -1,11 +1,43 @@
-import React, { useEffect } from 'react';
+import React, { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import Header from '../../components/ui/Header';
 import HeroSection from './components/HeroSection';
-import SkillsPreview from './components/SkillsPreview.jsx';
-import FeaturedProjects from './components/FeaturedProjects';
-import ExperienceTimeline from './components/ExperienceTimeline';
-import CTASection from './components/CTASection';
-import Footer from './components/Footer';
+
+const SkillsPreview = lazy(() => import('./components/SkillsPreview.jsx'));
+const FeaturedProjects = lazy(() => import('./components/FeaturedProjects'));
+const ExperienceTimeline = lazy(() => import('./components/ExperienceTimeline'));
+const CTASection = lazy(() => import('./components/CTASection'));
+const Footer = lazy(() => import('./components/Footer'));
+
+const DeferredSection = ({ children, minHeight = '340px' }) => {
+  const [visible, setVisible] = useState(false);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const element = containerRef.current;
+    if (!element || visible) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin: '320px 0px',
+      }
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [visible]);
+
+  return (
+    <section ref={containerRef} style={{ minHeight }}>
+      {visible ? children : null}
+    </section>
+  );
+};
 
 const Homepage = () => {
   useEffect(() => {
@@ -17,12 +49,30 @@ const Homepage = () => {
       <Header />
       <main>
         <HeroSection />
-        <SkillsPreview />
-        <FeaturedProjects />
-        <ExperienceTimeline />
-        <CTASection />
+        <DeferredSection>
+          <Suspense fallback={null}>
+            <SkillsPreview />
+          </Suspense>
+        </DeferredSection>
+        <DeferredSection>
+          <Suspense fallback={null}>
+            <FeaturedProjects />
+          </Suspense>
+        </DeferredSection>
+        <DeferredSection>
+          <Suspense fallback={null}>
+            <ExperienceTimeline />
+          </Suspense>
+        </DeferredSection>
+        <DeferredSection minHeight="260px">
+          <Suspense fallback={null}>
+            <CTASection />
+          </Suspense>
+        </DeferredSection>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   );
 };

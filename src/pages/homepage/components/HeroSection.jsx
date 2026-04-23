@@ -46,17 +46,20 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background px-4 md:px-6 lg:px-8 pt-16">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background px-4 md:px-6 lg:px-8 pt-16 pb-14 md:pb-16">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(0,127,163,0.12),transparent_40%),radial-gradient(circle_at_80%_10%,rgba(0,77,155,0.14),transparent_42%),radial-gradient(circle_at_50%_85%,rgba(0,77,155,0.08),transparent_45%)]" />
+      </div>
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 lg:w-[32rem] lg:h-[32rem] bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 lg:w-[32rem] lg:h-[32rem] bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 lg:w-[32rem] lg:h-[32rem] bg-primary/10 rounded-full blur-3xl animate-float-slow"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 lg:w-[32rem] lg:h-[32rem] bg-secondary/10 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: '2s' }}></div>
       </div>
       <div className="relative z-10 max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           <div className="text-center lg:text-left space-y-6 md:space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-              <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
-              <span className="text-xs md:text-sm text-primary font-medium">Available for opportunities</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/80 border border-primary/20 shadow-purple backdrop-blur-sm">
+              <div className="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_0_4px_rgba(0,77,155,0.14)]"></div>
+              <span className="text-xs md:text-sm text-primary font-semibold tracking-wide">Available for opportunities</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight">
@@ -98,7 +101,7 @@ const HeroSection = () => {
               {['React', 'Spring Boot', 'Node.js', 'FastAPI', 'MySQL', 'PostgreSQL', 'AWS', 'Docker']?.map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 py-1.5 md:px-4 md:py-2 rounded-lg bg-card border border-border text-xs md:text-sm text-foreground font-medium hover:border-primary/50 transition-colors duration-300"
+                  className="px-3 py-1.5 md:px-4 md:py-2 rounded-lg bg-card/90 border border-border text-xs md:text-sm text-foreground font-medium hover:border-primary/50 hover:-translate-y-0.5 hover:shadow-purple transition-all duration-300"
                 >
                   {tech}
                 </span>
@@ -107,7 +110,8 @@ const HeroSection = () => {
           </div>
 
           <div className="relative">
-            <div className="relative bg-card border border-border rounded-2xl p-6 md:p-8 shadow-purple-lg">
+            <div className="relative bg-card/95 border border-border/90 rounded-2xl p-6 md:p-8 shadow-purple-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-purple-xl">
+              <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-b from-white/35 via-transparent to-transparent dark:from-white/5" />
               <div className="flex items-center gap-2 mb-4 md:mb-6">
                 <div className="flex gap-1.5">
                   <div className="w-3 h-3 rounded-full bg-error"></div>
@@ -117,7 +121,7 @@ const HeroSection = () => {
                 <span className="text-xs md:text-sm text-muted-foreground ml-2">live-coding.js</span>
               </div>
 
-              <div className="space-y-3 md:space-y-4 font-mono text-xs md:text-sm lg:text-base">
+              <div className="relative z-10 space-y-3 md:space-y-4 font-mono text-xs md:text-sm lg:text-base">
                 <div className="text-muted-foreground">
                   <span className="text-code-keyword">const</span>{' '}
                   <span className="text-foreground">developer</span> ={' '}
@@ -140,7 +144,7 @@ const HeroSection = () => {
                 <div className="text-muted-foreground">];</div>
                 <div className="h-6 md:h-8 flex items-center">
                   <span className="text-foreground">{typedText}</span>
-                  <span className="inline-block w-2 h-4 md:h-5 bg-primary ml-1 animate-pulse"></span>
+                  <span className="inline-block w-2 h-4 md:h-5 bg-primary ml-1 animate-pulse rounded-sm"></span>
                 </div>
               </div>
 
@@ -149,14 +153,15 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 mt-12 md:mt-16 lg:mt-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 mt-12 md:mt-16 lg:mt-20 mb-8 md:mb-10">
           {stats?.map((stat, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-xl p-4 md:p-6 text-center hover:border-primary/50 transition-all duration-300 hover:shadow-purple"
+              className="group relative overflow-hidden bg-card/95 border border-border rounded-xl p-4 md:p-6 text-center transition-all duration-300 hover:border-primary/45 hover:-translate-y-1 hover:shadow-purple-lg"
             >
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-transparent via-primary/45 to-transparent" />
               <div className="flex justify-center mb-3 md:mb-4">
-                <div className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-lg bg-primary/10 flex items-center justify-center">
+                <div className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-lg bg-gradient-to-br from-primary/16 to-secondary/16 border border-primary/20 flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:border-primary/35">
                   <Icon name={stat?.icon} size={20} className="md:w-6 md:h-6 lg:w-7 lg:h-7" color="var(--color-primary)" />
                 </div>
               </div>

@@ -11,6 +11,32 @@ export default defineConfig({
 //     outDir: "build",
 //     chunkSizeWarningLimit: 2000,
 //   },
+  build: {
+    sourcemap: true,
+    target: "es2018",
+    chunkSizeWarningLimit: 900,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (!id.includes("node_modules")) return;
+
+          if (id.includes("/node_modules/lucide-react/")) {
+            return "vendor-icons";
+          }
+
+          if (id.includes("/node_modules/recharts/")) {
+            return "vendor-charts";
+          }
+
+          if (id.includes("/node_modules/react-router") || id.includes("/node_modules/history/")) {
+            return "vendor-router";
+          }
+
+          return "vendor";
+        },
+      },
+    },
+  },
   base: "/portfolio/",
   plugins: [tsconfigPaths(), react(), tagger()],
   server: {

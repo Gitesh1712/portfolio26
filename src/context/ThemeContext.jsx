@@ -6,9 +6,12 @@ const ThemeContext = createContext(undefined);
 const getStoredTheme = () => {
   try {
     const saved = localStorage.getItem(THEME_STORAGE_KEY);
-    return saved === 'dark' ? 'dark' : 'light';
+    if (saved === 'dark' || saved === 'light') {
+      return saved;
+    }
+    return 'dark';
   } catch {
-    return 'light';
+    return 'dark';
   }
 };
 
