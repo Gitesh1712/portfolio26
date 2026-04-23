@@ -2,6 +2,12 @@ import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const SkillComparisonMode = ({ comparisonData }) => {
+  const chartColors = {
+    y2024: '#004d9b',
+    y2025: '#007fa3',
+    y2026: '#63d0f2'
+  };
+
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload?.length) {
       return (
@@ -28,7 +34,7 @@ const SkillComparisonMode = ({ comparisonData }) => {
       <div className="w-full h-64 md:h-80">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={comparisonData}>
-            <CartesianGrid strokeDasharray="3 3" stroke="rgba(139, 92, 246, 0.1)" />
+            <CartesianGrid strokeDasharray="3 3" stroke="rgba(0, 77, 155, 0.14)" />
             <XAxis
               dataKey="skill"
               tick={{ fill: '#94a3b8', fontSize: 12 }}
@@ -45,9 +51,9 @@ const SkillComparisonMode = ({ comparisonData }) => {
               wrapperStyle={{ paddingTop: '20px' }}
               iconType="circle"
             />
-            <Bar dataKey="2024" fill="#8b5cf6" radius={[8, 8, 0, 0]} />
-            <Bar dataKey="2025" fill="#a78bfa" radius={[8, 8, 0, 0]} />
-            <Bar dataKey="2026" fill="#c4b5fd" radius={[8, 8, 0, 0]} />
+            <Bar dataKey="2024" fill={chartColors.y2024} radius={[8, 8, 0, 0]} />
+            <Bar dataKey="2025" fill={chartColors.y2025} radius={[8, 8, 0, 0]} />
+            <Bar dataKey="2026" fill={chartColors.y2026} radius={[8, 8, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </div>
@@ -55,21 +61,21 @@ const SkillComparisonMode = ({ comparisonData }) => {
       <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-muted rounded-lg p-4">
           <div className="flex items-center gap-2 mb-2">
-            <div className="w-3 h-3 rounded-full bg-[#8b5cf6]" />
+            <div className="w-3 h-3 rounded-full" style={{ backgroundColor: chartColors.y2024 }} />
             <span className="text-sm font-medium text-foreground">2024</span>
           </div>
           <p className="text-xs text-muted-foreground">Initial proficiency levels</p>
         </div>
         <div className="bg-muted rounded-lg p-4">
           <div className="flex items-center gap-2 mb-2">
-            <div className="w-3 h-3 rounded-full bg-[#a78bfa]" />
+            <div className="w-3 h-3 rounded-full" style={{ backgroundColor: chartColors.y2025 }} />
             <span className="text-sm font-medium text-foreground">2025</span>
           </div>
           <p className="text-xs text-muted-foreground">Current skill levels</p>
         </div>
         <div className="bg-muted rounded-lg p-4">
           <div className="flex items-center gap-2 mb-2">
-            <div className="w-3 h-3 rounded-full bg-[#c4b5fd]" />
+            <div className="w-3 h-3 rounded-full" style={{ backgroundColor: chartColors.y2026 }} />
             <span className="text-sm font-medium text-foreground">2026</span>
           </div>
           <p className="text-xs text-muted-foreground">Projected growth</p>

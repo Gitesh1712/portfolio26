@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
 
 @tailwind base;
@@ -9,85 +10,88 @@
 
 @layer base {
   :root {
-    /* Primary Colors */
-    --color-primary: #6f4ce6; /* regal-violet */
-    --color-primary-foreground: #ffffff; /* white */
-    
-    /* Secondary Colors */
-    --color-secondary: #9375ffe7; /* soft-iris */
-    --color-secondary-foreground: #ffffff; /* white */
-    
-    /* Accent Colors */
-    --color-accent: #ece6ff; /* mist-lilac */
-    --color-accent-foreground: #1f2430; /* graphite */
-    
-    /* Background Colors */
-    --color-background: #f6f7fb; /* porcelain */
-    --color-foreground: #1f2430; /* graphite */
-    
-    /* Surface Colors */
-    --color-card: #ffffff; /* white */
-    --color-card-foreground: #1f2430; /* graphite */
-    
-    --color-popover: #ffffff; /* white */
-    --color-popover-foreground: #1f2430; /* graphite */
-    
-    /* Muted Colors */
-    --color-muted: #eef1f7; /* cloud-gray */
-    --color-muted-foreground: #667085; /* slate-gray */
-    
-    /* Border & Input */
-    --color-border: rgba(31, 36, 48, 0.12); /* graphite with opacity */
-    --color-input: rgba(111, 76, 230, 0.25); /* violet with opacity */
-    --color-ring: #6f4ce6; /* regal-violet */
+    --color-primary: #004d9b;
+    --color-primary-foreground: #ffffff;
+
+    --color-secondary: #007fa3;
+    --color-secondary-foreground: #ffffff;
+
+    --color-accent: #dff2f8;
+    --color-accent-foreground: #0e2a38;
+
+    --color-background: #f7f9fc;
+    --color-foreground: #172033;
+
+    --color-card: #ffffff;
+    --color-card-foreground: #172033;
+
+    --color-popover: #ffffff;
+    --color-popover-foreground: #172033;
+
+    --color-muted: #e9eff6;
+    --color-muted-foreground: #4d5b75;
+
+    --color-border: rgba(23, 32, 51, 0.14);
+    --color-input: rgba(0, 77, 155, 0.26);
+    --color-ring: #007fa3;
     
     /* Status Colors */
-    --color-success: #10b981; /* emerald-500 */
-    --color-success-foreground: #ffffff; /* white */
-    
-    --color-warning: #f59e0b; /* amber-500 */
-    --color-warning-foreground: #ffffff; /* white */
-    
-    --color-error: #ef4444; /* red-500 */
-    --color-error-foreground: #ffffff; /* white */
-    
-    --color-destructive: #ef4444; /* red-500 */
-    --color-destructive-foreground: #ffffff; /* white */
-    
-    /* Additional Semantic Colors */
-    --color-info: #3b82f6; /* blue-500 */
-    --color-info-foreground: #ffffff; /* white */
+    --color-success: #0f9f67;
+    --color-success-foreground: #ffffff;
 
-    /* Code Syntax Colors */
-    --color-code-keyword: #7c3aed; /* violet-600 */
-    
-    /* Spacing & Layout */
+    --color-warning: #c8871b;
+    --color-warning-foreground: #ffffff;
+
+    --color-error: #d63d4c;
+    --color-error-foreground: #ffffff;
+
+    --color-destructive: #d63d4c;
+    --color-destructive-foreground: #ffffff;
+
+    --color-info: #1768d3;
+    --color-info-foreground: #ffffff;
+
+    --color-code-keyword: #005fcc;
+
+    --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-heading: 'Sora', 'Manrope', sans-serif;
+    --font-cta: 'Plus Jakarta Sans', 'Manrope', sans-serif;
+    --font-code: 'Fira Code', 'JetBrains Mono', monospace;
+
+    --text-xs: clamp(0.78rem, 0.74rem + 0.2vw, 0.87rem);
+    --text-sm: clamp(0.9rem, 0.85rem + 0.25vw, 1rem);
+    --text-base: clamp(1rem, 0.94rem + 0.32vw, 1.125rem);
+    --text-lg: clamp(1.12rem, 1rem + 0.45vw, 1.32rem);
+    --text-xl: clamp(1.3rem, 1.15rem + 0.72vw, 1.7rem);
+    --text-2xl: clamp(1.55rem, 1.2rem + 1.15vw, 2.2rem);
+    --text-3xl: clamp(1.95rem, 1.45rem + 1.8vw, 3rem);
+
     --radius: 0.5rem;
   }
 
   .dark {
-    --color-primary: #9d87ff; /* bright-violet for contrast */
-    --color-secondary: #b5a4ff; /* soft-lavender */
-    --color-accent: #2a2540; /* deep-lilac */
-    --color-accent-foreground: #f3f5fb; /* off-white */
+    --color-primary: #5ca4ff;
+    --color-secondary: #63d0f2;
+    --color-accent: #123448;
+    --color-accent-foreground: #dff3ff;
 
-    --color-background: #0f121a; /* midnight-slate */
-    --color-foreground: #e8ecf5; /* cool-off-white */
-    
-    --color-card: #161b26; /* elevated-midnight */
-    --color-card-foreground: #e8ecf5; /* cool-off-white */
-    
-    --color-popover: #161b26; /* elevated-midnight */
-    --color-popover-foreground: #e8ecf5; /* cool-off-white */
-    
-    --color-muted: #232b3a; /* muted-slate */
-    --color-muted-foreground: #aab4c8; /* misty-gray */
-    
-    --color-border: rgba(232, 236, 245, 0.16); /* off-white border */
-    --color-input: rgba(157, 135, 255, 0.38); /* violet input */
-    --color-ring: #9d87ff; /* bright-violet */
+    --color-background: #0b1220;
+    --color-foreground: #dde8f9;
 
-    --color-code-keyword: #c4b5fd; /* violet-300 */
+    --color-card: #0f1a2d;
+    --color-card-foreground: #dde8f9;
+
+    --color-popover: #0f1a2d;
+    --color-popover-foreground: #dde8f9;
+
+    --color-muted: #18253d;
+    --color-muted-foreground: #9eb2cd;
+
+    --color-border: rgba(221, 232, 249, 0.18);
+    --color-input: rgba(99, 208, 242, 0.38);
+    --color-ring: #63d0f2;
+
+    --color-code-keyword: #7dc4ff;
   }
 
   * {
@@ -96,7 +100,10 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.65;
+    letter-spacing: 0.005em;
     font-feature-settings: "rlig" 1, "calt" 1;
     background-image:
       radial-gradient(circle at 15% -10%, color-mix(in srgb, var(--color-primary) 12%, transparent) 0%, transparent 38%),
@@ -106,12 +113,34 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-heading);
     font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
   }
 
   code, pre {
-    font-family: 'Fira Code', monospace;
+    font-family: var(--font-code);
+  }
+
+  h1 {
+    font-size: var(--text-3xl);
+  }
+
+  h2 {
+    font-size: var(--text-2xl);
+  }
+
+  h3 {
+    font-size: var(--text-xl);
+  }
+
+  p, li {
+    color: color-mix(in srgb, var(--color-foreground) 92%, transparent);
+  }
+
+  .font-cta {
+    font-family: var(--font-cta);
   }
 }
 

@@ -3,10 +3,10 @@ import Icon from '../../../components/AppIcon';
 
 const SkillCard = ({ skill, onSelect, isSelected }) => {
   const getColorClasses = (proficiency) => {
-    if (proficiency >= 90) return 'from-purple-500 to-purple-600';
-    if (proficiency >= 75) return 'from-purple-400 to-purple-500';
-    if (proficiency >= 60) return 'from-purple-300 to-purple-400';
-    return 'from-purple-200 to-purple-300';
+    if (proficiency >= 90) return 'from-primary to-secondary';
+    if (proficiency >= 75) return 'from-primary/90 to-secondary/90';
+    if (proficiency >= 60) return 'from-primary/75 to-secondary/75';
+    return 'from-primary/60 to-secondary/60';
   };
 
   return (
